@@ -1,0 +1,51 @@
+[2024-05-19 12:06:52] [DEBUG] -----第0轮训练开始------
+[2024-05-19 12:08:53] [DEBUG] Train loss:1.2238|Train accuracy:61.302%|Test loss:0.8199|Test accuracy:74.27%
+[2024-05-19 12:08:54] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:08:54] [DEBUG] -----第1轮训练开始------
+[2024-05-19 12:10:56] [DEBUG] Train loss:0.7707|Train accuracy:75.346%|Test loss:0.8875|Test accuracy:72.83%
+[2024-05-19 12:10:56] [DEBUG] -----第2轮训练开始------
+[2024-05-19 12:12:59] [DEBUG] Train loss:0.588|Train accuracy:81.128%|Test loss:0.6538|Test accuracy:79.39%
+[2024-05-19 12:13:01] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:13:01] [DEBUG] -----第3轮训练开始------
+[2024-05-19 12:15:03] [DEBUG] Train loss:0.4537|Train accuracy:85.028%|Test loss:0.6708|Test accuracy:79.47%
+[2024-05-19 12:15:05] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:15:05] [DEBUG] -----第4轮训练开始------
+[2024-05-19 12:17:07] [DEBUG] Train loss:0.3389|Train accuracy:88.908%|Test loss:0.6476|Test accuracy:80.78%
+[2024-05-19 12:17:09] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:17:09] [DEBUG] -----第5轮训练开始------
+[2024-05-19 12:19:11] [DEBUG] Train loss:0.2763|Train accuracy:90.716%|Test loss:0.722|Test accuracy:78.76%
+[2024-05-19 12:19:11] [DEBUG] -----第6轮训练开始------
+[2024-05-19 12:21:13] [DEBUG] Train loss:0.2126|Train accuracy:92.93%|Test loss:0.7024|Test accuracy:80.4%
+[2024-05-19 12:21:13] [DEBUG] -----第7轮训练开始------
+[2024-05-19 12:23:15] [DEBUG] Train loss:0.1784|Train accuracy:94.168%|Test loss:0.7132|Test accuracy:81.25%
+[2024-05-19 12:23:17] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:23:17] [DEBUG] -----第8轮训练开始------
+[2024-05-19 12:25:19] [DEBUG] Train loss:0.1532|Train accuracy:94.916%|Test loss:0.8417|Test accuracy:78.95%
+[2024-05-19 12:25:19] [DEBUG] -----第9轮训练开始------
+[2024-05-19 12:27:21] [DEBUG] Train loss:0.1274|Train accuracy:95.928%|Test loss:0.8256|Test accuracy:80.35%
+[2024-05-19 12:27:21] [DEBUG] -----第10轮训练开始------
+[2024-05-19 12:29:23] [DEBUG] Train loss:0.0261|Train accuracy:99.232%|Test loss:0.7124|Test accuracy:84.34%
+[2024-05-19 12:29:25] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:29:25] [DEBUG] -----第11轮训练开始------
+[2024-05-19 12:31:27] [DEBUG] Train loss:0.0095|Train accuracy:99.73%|Test loss:0.7724|Test accuracy:84.51%
+[2024-05-19 12:31:29] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:31:29] [DEBUG] -----第12轮训练开始------
+[2024-05-19 12:33:31] [DEBUG] Train loss:0.0068|Train accuracy:99.806%|Test loss:0.8109|Test accuracy:84.57%
+[2024-05-19 12:33:32] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:33:32] [DEBUG] -----第13轮训练开始------
+[2024-05-19 12:35:34] [DEBUG] Train loss:0.0047|Train accuracy:99.882%|Test loss:0.8417|Test accuracy:84.78%
+[2024-05-19 12:35:36] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:35:36] [DEBUG] -----第14轮训练开始------
+[2024-05-19 12:37:38] [DEBUG] Train loss:0.0044|Train accuracy:99.876%|Test loss:0.8509|Test accuracy:84.65%
+[2024-05-19 12:37:38] [DEBUG] -----第15轮训练开始------
+[2024-05-19 12:39:40] [DEBUG] Train loss:0.0037|Train accuracy:99.916%|Test loss:0.8599|Test accuracy:84.96%
+[2024-05-19 12:39:42] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:39:42] [DEBUG] -----第16轮训练开始------
+[2024-05-19 12:41:44] [DEBUG] Train loss:0.0029|Train accuracy:99.922%|Test loss:0.8962|Test accuracy:84.87%
+[2024-05-19 12:41:44] [DEBUG] -----第17轮训练开始------
+[2024-05-19 12:43:47] [DEBUG] Train loss:0.0029|Train accuracy:99.918%|Test loss:0.9243|Test accuracy:84.8%
+[2024-05-19 12:43:47] [DEBUG] -----第18轮训练开始------
+[2024-05-19 12:45:49] [DEBUG] Train loss:0.002|Train accuracy:99.958%|Test loss:0.934|Test accuracy:85.08%
+[2024-05-19 12:45:51] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/VGG19/best_coarse.pth
+[2024-05-19 12:45:51] [DEBUG] -----第19轮训练开始------
+[2024-05-19 12:47:53] [DEBUG] Train loss:0.002|Train accuracy:99.942%|Test loss:0.9491|Test accuracy:85.08%

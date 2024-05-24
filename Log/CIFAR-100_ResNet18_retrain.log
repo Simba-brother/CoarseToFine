@@ -1,0 +1,1014 @@
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/torch/cuda/__init__.py:611: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/torch/overrides.py:110: UserWarning: 'has_cuda' is deprecated, please use 'torch.backends.cuda.is_built()'
+  torch.has_cuda,
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/torch/overrides.py:111: UserWarning: 'has_cudnn' is deprecated, please use 'torch.backends.cudnn.is_available()'
+  torch.has_cudnn,
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/torch/overrides.py:117: UserWarning: 'has_mps' is deprecated, please use 'torch.backends.mps.is_built()'
+  torch.has_mps,
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/torch/overrides.py:118: UserWarning: 'has_mkldnn' is deprecated, please use 'torch.backends.mkldnn.is_available()'
+  torch.has_mkldnn,
+retrain_exp:0
+加载数据集
+Files already downloaded and verified
+Files already downloaded and verified
+加载retrained coarse model
+指定分裂的类别:19
+分裂的数据集的数量:500
+开始聚类｜簇数:5
+For n_clusters = 5, The average silhouette_score is : 0.5153715014457703
+聚类中心采样
+聚类边界采样
+随机采样
+DeepGini采样
+MCP采样
+1:构建聚类边界样本集
+采样的边界样本数量:52
+采样的边界标签数量统计:Counter({23: 20, 19: 13, 22: 11, 20: 7, 21: 1})
+2:构建聚类中心采样集
+采样的中心样本数量:52
+采样的中心标签数量统计:Counter({21: 13, 22: 12, 23: 10, 20: 10, 19: 7})
+3:构建随机采样集
+样本数量:52
+随机采样标签数量统计:Counter({20: 16, 23: 12, 21: 11, 19: 8, 22: 5})
+4:构建DeepGini采样集
+DeepGini采样样本数量:52
+DeepGini采样标签数量统计:Counter({20: 15, 19: 14, 23: 11, 22: 10, 21: 2})
+MCP采样样本数量:52
+MCP采样标签数量统计:Counter({20: 15, 22: 11, 21: 11, 19: 10, 23: 5})
+构建新场景数据集
+新场景样本数量:10000
+新场景样本标签数量统计:Counter({10: 500, 0: 500, 4: 500, 2: 500, 11: 500, 7: 500, 12: 500, 5: 500, 8: 500, 15: 500, 3: 500, 18: 500, 6: 500, 17: 500, 1: 500, 14: 500, 9: 500, 13: 500, 16: 500, 21: 100, 20: 100, 19: 100, 23: 100, 22: 100})
+构建出fine model
+用新场景数据集对initial_fine_model进行评估
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test loss:0.8885|Test accuracy:83.54%
+{'0': {'precision': 0.8044806517311609, 'recall': 0.79, 'f1-score': 0.7971745711402625, 'support': 500.0}, '1': {'precision': 0.823076923076923, 'recall': 0.856, 'f1-score': 0.8392156862745097, 'support': 500.0}, '2': {'precision': 0.9320388349514563, 'recall': 0.96, 'f1-score': 0.9458128078817734, 'support': 500.0}, '3': {'precision': 0.864244741873805, 'recall': 0.904, 'f1-score': 0.8836754643206256, 'support': 500.0}, '4': {'precision': 0.887378640776699, 'recall': 0.914, 'f1-score': 0.9004926108374385, 'support': 500.0}, '5': {'precision': 0.8269961977186312, 'recall': 0.87, 'f1-score': 0.847953216374269, 'support': 500.0}, '6': {'precision': 0.9166666666666666, 'recall': 0.924, 'f1-score': 0.9203187250996016, 'support': 500.0}, '7': {'precision': 0.8579881656804734, 'recall': 0.87, 'f1-score': 0.8639523336643495, 'support': 500.0}, '8': {'precision': 0.8469184890656064, 'recall': 0.852, 'f1-score': 0.8494516450648055, 'support': 500.0}, '9': {'precision': 0.7886855241264559, 'recall': 0.948, 'f1-score': 0.8610354223433242, 'support': 500.0}, '10': {'precision': 0.8891013384321224, 'recall': 0.93, 'f1-score': 0.9090909090909091, 'support': 500.0}, '11': {'precision': 0.8155339805825242, 'recall': 0.84, 'f1-score': 0.8275862068965517, 'support': 500.0}, '12': {'precision': 0.8484848484848485, 'recall': 0.784, 'f1-score': 0.814968814968815, 'support': 500.0}, '13': {'precision': 0.7976424361493124, 'recall': 0.812, 'f1-score': 0.804757185332012, 'support': 500.0}, '14': {'precision': 0.9264990328820116, 'recall': 0.958, 'f1-score': 0.9419862340216322, 'support': 500.0}, '15': {'precision': 0.7749003984063745, 'recall': 0.778, 'f1-score': 0.7764471057884232, 'support': 500.0}, '16': {'precision': 0.7857142857142857, 'recall': 0.814, 'f1-score': 0.7996070726915521, 'support': 500.0}, '17': {'precision': 0.9298245614035088, 'recall': 0.954, 'f1-score': 0.9417571569595261, 'support': 500.0}, '18': {'precision': 0.6453804347826086, 'recall': 0.95, 'f1-score': 0.7686084142394821, 'support': 500.0}, '19': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '20': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '21': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '22': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '23': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, 'accuracy': 0.8354, 'macro avg': {'precision': 0.665064839687728, 'recall': 0.6961666666666666, 'f1-score': 0.6789121492912442, 'support': 10000.0}, 'weighted avg': {'precision': 0.7980778076252737, 'recall': 0.8354, 'f1-score': 0.8146945791494931, 'support': 10000.0}}
+开始retrain阶段
+1:聚类边界采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({9: 61, 10: 59, 7: 57, 13: 56, 17: 55, 0: 54, 5: 53, 16: 51, 8: 49, 12: 49, 18: 49, 15: 48, 6: 48, 1: 47, 4: 46, 11: 45, 2: 45, 3: 43, 14: 35, 23: 20, 19: 13, 22: 11, 20: 7, 21: 1})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3579|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.1862|Train accuracy:95.509%
+-----第2轮重训练开始------
+Train loss:0.1211|Train accuracy:96.3074%
+-----第3轮重训练开始------
+Train loss:0.1206|Train accuracy:96.4072%
+-----第4轮重训练开始------
+Train loss:0.0897|Train accuracy:96.8064%
+-----第5轮重训练开始------
+Train loss:0.0705|Train accuracy:98.1038%
+-----第6轮重训练开始------
+Train loss:0.0597|Train accuracy:98.8024%
+-----第7轮重训练开始------
+Train loss:0.0548|Train accuracy:98.8024%
+-----第8轮重训练开始------
+Train loss:0.049|Train accuracy:99.1018%
+-----第9轮重训练开始------
+Train loss:0.0447|Train accuracy:99.3014%
+(4) 开始对retrained_fine_model eval
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test loss:0.699|Test accuracy:83.74%
+{'0': {'precision': 0.7897838899803536, 'recall': 0.804, 'f1-score': 0.7968285431119922, 'support': 500.0}, '1': {'precision': 0.8105065666041276, 'recall': 0.864, 'f1-score': 0.8363988383349468, 'support': 500.0}, '2': {'precision': 0.9443339960238568, 'recall': 0.95, 'f1-score': 0.9471585244267198, 'support': 500.0}, '3': {'precision': 0.9154334038054969, 'recall': 0.866, 'f1-score': 0.8900308324768756, 'support': 500.0}, '4': {'precision': 0.920997920997921, 'recall': 0.886, 'f1-score': 0.9031600407747197, 'support': 500.0}, '5': {'precision': 0.8722986247544204, 'recall': 0.888, 'f1-score': 0.8800792864222002, 'support': 500.0}, '6': {'precision': 0.9707865168539326, 'recall': 0.864, 'f1-score': 0.9142857142857143, 'support': 500.0}, '7': {'precision': 0.9395348837209302, 'recall': 0.808, 'f1-score': 0.8688172043010753, 'support': 500.0}, '8': {'precision': 0.8495049504950495, 'recall': 0.858, 'f1-score': 0.853731343283582, 'support': 500.0}, '9': {'precision': 0.9284210526315789, 'recall': 0.882, 'f1-score': 0.9046153846153846, 'support': 500.0}, '10': {'precision': 0.9507494646680942, 'recall': 0.888, 'f1-score': 0.9183040330920372, 'support': 500.0}, '11': {'precision': 0.8683651804670913, 'recall': 0.818, 'f1-score': 0.8424304840370751, 'support': 500.0}, '12': {'precision': 0.8436830835117773, 'recall': 0.788, 'f1-score': 0.8148914167528439, 'support': 500.0}, '13': {'precision': 0.8609271523178808, 'recall': 0.78, 'f1-score': 0.8184679958027282, 'support': 500.0}, '14': {'precision': 0.9347826086956522, 'recall': 0.946, 'f1-score': 0.9403578528827038, 'support': 500.0}, '15': {'precision': 0.8055555555555556, 'recall': 0.754, 'f1-score': 0.7789256198347106, 'support': 500.0}, '16': {'precision': 0.8044354838709677, 'recall': 0.798, 'f1-score': 0.8012048192771085, 'support': 500.0}, '17': {'precision': 0.950920245398773, 'recall': 0.93, 'f1-score': 0.9403437815975733, 'support': 500.0}, '18': {'precision': 0.8363636363636363, 'recall': 0.92, 'f1-score': 0.8761904761904761, 'support': 500.0}, '19': {'precision': 0.1715686274509804, 'recall': 0.35, 'f1-score': 0.23026315789473686, 'support': 100.0}, '20': {'precision': 0.6614173228346457, 'recall': 0.84, 'f1-score': 0.7400881057268722, 'support': 100.0}, '21': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '22': {'precision': 0.1958762886597938, 'recall': 0.19, 'f1-score': 0.19289340101522842, 'support': 100.0}, '23': {'precision': 0.2631578947368421, 'recall': 0.9, 'f1-score': 0.40723981900452483, 'support': 100.0}, 'accuracy': 0.8374, 'macro avg': {'precision': 0.7537251812666398, 'recall': 0.7738333333333335, 'f1-score': 0.7540294447975763, 'support': 10000.0}, 'weighted avg': {'precision': 0.8527894121726775, 'recall': 0.8374, 'f1-score': 0.842015954411437, 'support': 10000.0}}
+boundary_retrain|improve_acc:0.2%
+2:聚类中心采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({11: 61, 2: 60, 1: 57, 0: 56, 13: 54, 16: 53, 4: 52, 12: 51, 15: 50, 5: 50, 18: 50, 14: 49, 8: 49, 9: 48, 10: 45, 17: 45, 3: 43, 6: 40, 7: 37, 21: 13, 22: 12, 23: 10, 20: 10, 19: 7})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3729|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.1834|Train accuracy:94.8104%
+-----第2轮重训练开始------
+Train loss:0.0804|Train accuracy:97.2056%
+-----第3轮重训练开始------
+Train loss:0.0811|Train accuracy:97.9042%
+-----第4轮重训练开始------
+Train loss:0.056|Train accuracy:98.9022%
+-----第5轮重训练开始------
+Train loss:0.0381|Train accuracy:99.4012%
+-----第6轮重训练开始------
+Train loss:0.0311|Train accuracy:99.501%
+-----第7轮重训练开始------
+Train loss:0.026|Train accuracy:99.7006%
+-----第8轮重训练开始------
+Train loss:0.0226|Train accuracy:99.8004%
+-----第9轮重训练开始------
+Train loss:0.0206|Train accuracy:99.9002%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6032|Test accuracy:85.44%
+{'0': {'precision': 0.8061224489795918, 'recall': 0.79, 'f1-score': 0.7979797979797979, 'support': 500.0}, '1': {'precision': 0.8275193798449613, 'recall': 0.854, 'f1-score': 0.8405511811023622, 'support': 500.0}, '2': {'precision': 0.9198473282442748, 'recall': 0.964, 'f1-score': 0.94140625, 'support': 500.0}, '3': {'precision': 0.898, 'recall': 0.898, 'f1-score': 0.898, 'support': 500.0}, '4': {'precision': 0.9270833333333334, 'recall': 0.89, 'f1-score': 0.9081632653061226, 'support': 500.0}, '5': {'precision': 0.9033613445378151, 'recall': 0.86, 'f1-score': 0.8811475409836066, 'support': 500.0}, '6': {'precision': 0.9364754098360656, 'recall': 0.914, 'f1-score': 0.9251012145748988, 'support': 500.0}, '7': {'precision': 0.9036402569593148, 'recall': 0.844, 'f1-score': 0.8728024819027922, 'support': 500.0}, '8': {'precision': 0.8557114228456913, 'recall': 0.854, 'f1-score': 0.8548548548548548, 'support': 500.0}, '9': {'precision': 0.9107505070993914, 'recall': 0.898, 'f1-score': 0.904330312185297, 'support': 500.0}, '10': {'precision': 0.931958762886598, 'recall': 0.904, 'f1-score': 0.9177664974619288, 'support': 500.0}, '11': {'precision': 0.8506224066390041, 'recall': 0.82, 'f1-score': 0.835030549898167, 'support': 500.0}, '12': {'precision': 0.8329809725158562, 'recall': 0.788, 'f1-score': 0.8098663926002057, 'support': 500.0}, '13': {'precision': 0.8357894736842105, 'recall': 0.794, 'f1-score': 0.8143589743589743, 'support': 500.0}, '14': {'precision': 0.9161904761904762, 'recall': 0.962, 'f1-score': 0.9385365853658537, 'support': 500.0}, '15': {'precision': 0.8533653846153846, 'recall': 0.71, 'f1-score': 0.7751091703056768, 'support': 500.0}, '16': {'precision': 0.7803030303030303, 'recall': 0.824, 'f1-score': 0.801556420233463, 'support': 500.0}, '17': {'precision': 0.9352941176470588, 'recall': 0.954, 'f1-score': 0.9445544554455445, 'support': 500.0}, '18': {'precision': 0.927765237020316, 'recall': 0.822, 'f1-score': 0.8716861081654295, 'support': 500.0}, '19': {'precision': 0.8985507246376812, 'recall': 0.62, 'f1-score': 0.7337278106508875, 'support': 100.0}, '20': {'precision': 0.8095238095238095, 'recall': 0.85, 'f1-score': 0.8292682926829269, 'support': 100.0}, '21': {'precision': 0.41530054644808745, 'recall': 0.76, 'f1-score': 0.5371024734982333, 'support': 100.0}, '22': {'precision': 0.2831050228310502, 'recall': 0.62, 'f1-score': 0.3887147335423197, 'support': 100.0}, '23': {'precision': 0.564935064935065, 'recall': 0.87, 'f1-score': 0.6850393700787402, 'support': 100.0}, 'accuracy': 0.8544, 'macro avg': {'precision': 0.8218415192315862, 'recall': 0.836, 'f1-score': 0.8211106138824201, 'support': 10000.0}, 'weighted avg': {'precision': 0.8673532163428758, 'recall': 0.8544, 'f1-score': 0.8583786294407797, 'support': 10000.0}}
+center_retrain|improve_acc:1.9%
+3:随机采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({7: 63, 13: 60, 8: 59, 18: 57, 10: 56, 11: 55, 2: 55, 3: 52, 0: 51, 5: 50, 16: 49, 4: 48, 12: 46, 15: 43, 14: 43, 6: 43, 9: 43, 17: 40, 1: 37, 20: 16, 23: 12, 21: 11, 19: 8, 22: 5})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.386|Train accuracy:94.7106%
+-----第1轮重训练开始------
+Train loss:0.2031|Train accuracy:95.01%
+-----第2轮重训练开始------
+Train loss:0.0964|Train accuracy:97.2056%
+-----第3轮重训练开始------
+Train loss:0.0839|Train accuracy:98.004%
+-----第4轮重训练开始------
+Train loss:0.0723|Train accuracy:98.1038%
+-----第5轮重训练开始------
+Train loss:0.0545|Train accuracy:98.9022%
+-----第6轮重训练开始------
+Train loss:0.0448|Train accuracy:99.002%
+-----第7轮重训练开始------
+Train loss:0.0388|Train accuracy:99.2016%
+-----第8轮重训练开始------
+Train loss:0.0356|Train accuracy:99.501%
+-----第9轮重训练开始------
+Train loss:0.0323|Train accuracy:99.6008%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6378|Test accuracy:84.76%
+{'0': {'precision': 0.8568181818181818, 'recall': 0.754, 'f1-score': 0.802127659574468, 'support': 500.0}, '1': {'precision': 0.8235294117647058, 'recall': 0.84, 'f1-score': 0.8316831683168315, 'support': 500.0}, '2': {'precision': 0.9426877470355731, 'recall': 0.954, 'f1-score': 0.94831013916501, 'support': 500.0}, '3': {'precision': 0.89738430583501, 'recall': 0.892, 'f1-score': 0.8946840521564694, 'support': 500.0}, '4': {'precision': 0.9035433070866141, 'recall': 0.918, 'f1-score': 0.9107142857142858, 'support': 500.0}, '5': {'precision': 0.904862579281184, 'recall': 0.856, 'f1-score': 0.879753340184995, 'support': 500.0}, '6': {'precision': 0.941908713692946, 'recall': 0.908, 'f1-score': 0.9246435845213848, 'support': 500.0}, '7': {'precision': 0.9363636363636364, 'recall': 0.824, 'f1-score': 0.876595744680851, 'support': 500.0}, '8': {'precision': 0.841897233201581, 'recall': 0.852, 'f1-score': 0.8469184890656064, 'support': 500.0}, '9': {'precision': 0.9336188436830836, 'recall': 0.872, 'f1-score': 0.9017580144777664, 'support': 500.0}, '10': {'precision': 0.9222903885480572, 'recall': 0.902, 'f1-score': 0.9120323559150657, 'support': 500.0}, '11': {'precision': 0.8346613545816733, 'recall': 0.838, 'f1-score': 0.8363273453093812, 'support': 500.0}, '12': {'precision': 0.7948207171314741, 'recall': 0.798, 'f1-score': 0.7964071856287426, 'support': 500.0}, '13': {'precision': 0.8710407239819005, 'recall': 0.77, 'f1-score': 0.8174097664543525, 'support': 500.0}, '14': {'precision': 0.9263565891472868, 'recall': 0.956, 'f1-score': 0.9409448818897638, 'support': 500.0}, '15': {'precision': 0.864406779661017, 'recall': 0.714, 'f1-score': 0.7820372398685652, 'support': 500.0}, '16': {'precision': 0.7628676470588235, 'recall': 0.83, 'f1-score': 0.7950191570881225, 'support': 500.0}, '17': {'precision': 0.9263565891472868, 'recall': 0.956, 'f1-score': 0.9409448818897638, 'support': 500.0}, '18': {'precision': 0.9274725274725275, 'recall': 0.844, 'f1-score': 0.8837696335078533, 'support': 500.0}, '19': {'precision': 0.48, 'recall': 0.72, 'f1-score': 0.576, 'support': 100.0}, '20': {'precision': 0.44554455445544555, 'recall': 0.9, 'f1-score': 0.5960264900662252, 'support': 100.0}, '21': {'precision': 0.4601226993865031, 'recall': 0.75, 'f1-score': 0.5703422053231939, 'support': 100.0}, '22': {'precision': 0.48148148148148145, 'recall': 0.13, 'f1-score': 0.20472440944881887, 'support': 100.0}, '23': {'precision': 0.348, 'recall': 0.87, 'f1-score': 0.4971428571428571, 'support': 100.0}, 'accuracy': 0.8476, 'macro avg': {'precision': 0.7928348338256663, 'recall': 0.8186666666666667, 'f1-score': 0.7902632036412655, 'support': 10000.0}, 'weighted avg': {'precision': 0.8627958511778625, 'recall': 0.8476, 'f1-score': 0.8505464058902747, 'support': 10000.0}}
+random_retrain|improve_acc:1.22%
+4:DeepGini采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({12: 62, 15: 59, 13: 54, 18: 54, 16: 53, 7: 52, 17: 52, 3: 50, 0: 50, 1: 49, 9: 48, 5: 48, 10: 48, 6: 47, 14: 47, 2: 46, 4: 45, 11: 44, 8: 42, 20: 15, 19: 14, 23: 11, 22: 10, 21: 2})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3247|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.1844|Train accuracy:94.9102%
+-----第2轮重训练开始------
+Train loss:0.0935|Train accuracy:97.1058%
+-----第3轮重训练开始------
+Train loss:0.0812|Train accuracy:98.004%
+-----第4轮重训练开始------
+Train loss:0.0808|Train accuracy:98.3034%
+-----第5轮重训练开始------
+Train loss:0.0657|Train accuracy:98.6028%
+-----第6轮重训练开始------
+Train loss:0.0559|Train accuracy:98.8024%
+-----第7轮重训练开始------
+Train loss:0.0493|Train accuracy:99.1018%
+-----第8轮重训练开始------
+Train loss:0.0443|Train accuracy:99.2016%
+-----第9轮重训练开始------
+Train loss:0.0411|Train accuracy:99.4012%
+(4) 开始对retrained_fine_model eval
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test loss:0.697|Test accuracy:84.39%
+{'0': {'precision': 0.7441860465116279, 'recall': 0.832, 'f1-score': 0.7856468366383381, 'support': 500.0}, '1': {'precision': 0.8414634146341463, 'recall': 0.828, 'f1-score': 0.8346774193548386, 'support': 500.0}, '2': {'precision': 0.9334637964774951, 'recall': 0.954, 'f1-score': 0.9436201780415431, 'support': 500.0}, '3': {'precision': 0.9166666666666666, 'recall': 0.88, 'f1-score': 0.8979591836734694, 'support': 500.0}, '4': {'precision': 0.9112903225806451, 'recall': 0.904, 'f1-score': 0.9076305220883534, 'support': 500.0}, '5': {'precision': 0.9363636363636364, 'recall': 0.824, 'f1-score': 0.876595744680851, 'support': 500.0}, '6': {'precision': 0.9471458773784355, 'recall': 0.896, 'f1-score': 0.9208633093525179, 'support': 500.0}, '7': {'precision': 0.9276018099547512, 'recall': 0.82, 'f1-score': 0.870488322717622, 'support': 500.0}, '8': {'precision': 0.8677685950413223, 'recall': 0.84, 'f1-score': 0.853658536585366, 'support': 500.0}, '9': {'precision': 0.8728971962616823, 'recall': 0.934, 'f1-score': 0.9024154589371981, 'support': 500.0}, '10': {'precision': 0.9449152542372882, 'recall': 0.892, 'f1-score': 0.9176954732510287, 'support': 500.0}, '11': {'precision': 0.8896551724137931, 'recall': 0.774, 'f1-score': 0.827807486631016, 'support': 500.0}, '12': {'precision': 0.8376623376623377, 'recall': 0.774, 'f1-score': 0.8045738045738046, 'support': 500.0}, '13': {'precision': 0.841541755888651, 'recall': 0.786, 'f1-score': 0.81282316442606, 'support': 500.0}, '14': {'precision': 0.9334637964774951, 'recall': 0.954, 'f1-score': 0.9436201780415431, 'support': 500.0}, '15': {'precision': 0.8599033816425121, 'recall': 0.712, 'f1-score': 0.7789934354485777, 'support': 500.0}, '16': {'precision': 0.8012048192771084, 'recall': 0.798, 'f1-score': 0.7995991983967936, 'support': 500.0}, '17': {'precision': 0.9422310756972112, 'recall': 0.946, 'f1-score': 0.9441117764471058, 'support': 500.0}, '18': {'precision': 0.8099467140319716, 'recall': 0.912, 'f1-score': 0.8579492003762935, 'support': 500.0}, '19': {'precision': 0.3524590163934426, 'recall': 0.86, 'f1-score': 0.5, 'support': 100.0}, '20': {'precision': 0.4339622641509434, 'recall': 0.92, 'f1-score': 0.5897435897435898, 'support': 100.0}, '21': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '22': {'precision': 0.4896551724137931, 'recall': 0.71, 'f1-score': 0.5795918367346939, 'support': 100.0}, '23': {'precision': 0.36809815950920244, 'recall': 0.6, 'f1-score': 0.4562737642585551, 'support': 100.0}, 'accuracy': 0.8439, 'macro avg': {'precision': 0.7668144284027566, 'recall': 0.80625, 'f1-score': 0.7752641008499649, 'support': 10000.0}, 'weighted avg': {'precision': 0.8544103295846126, 'recall': 0.8439, 'f1-score': 0.8452925533904844, 'support': 10000.0}}
+DeepGini_retrain|improve_acc:0.85%
+5:MCP采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({10: 63, 14: 61, 2: 61, 0: 60, 15: 57, 3: 54, 1: 54, 6: 52, 16: 50, 7: 49, 13: 49, 4: 48, 12: 47, 18: 46, 5: 44, 17: 44, 11: 41, 9: 37, 8: 33, 20: 15, 22: 11, 21: 11, 19: 10, 23: 5})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.4438|Train accuracy:94.7106%
+-----第1轮重训练开始------
+Train loss:0.2882|Train accuracy:94.7106%
+-----第2轮重训练开始------
+Train loss:0.129|Train accuracy:96.3074%
+-----第3轮重训练开始------
+Train loss:0.1136|Train accuracy:97.1058%
+-----第4轮重训练开始------
+Train loss:0.1087|Train accuracy:97.8044%
+-----第5轮重训练开始------
+Train loss:0.0823|Train accuracy:97.7046%
+-----第6轮重训练开始------
+Train loss:0.0682|Train accuracy:98.2036%
+-----第7轮重训练开始------
+Train loss:0.0591|Train accuracy:99.002%
+-----第8轮重训练开始------
+Train loss:0.0559|Train accuracy:98.9022%
+-----第9轮重训练开始------
+Train loss:0.0517|Train accuracy:99.2016%
+(4) 开始对retrained_fine_model eval
+Test loss:0.7041|Test accuracy:83.36%
+{'0': {'precision': 0.777992277992278, 'recall': 0.806, 'f1-score': 0.7917485265225934, 'support': 500.0}, '1': {'precision': 0.8719646799116998, 'recall': 0.79, 'f1-score': 0.8289611752360966, 'support': 500.0}, '2': {'precision': 0.9515151515151515, 'recall': 0.942, 'f1-score': 0.9467336683417087, 'support': 500.0}, '3': {'precision': 0.9130434782608695, 'recall': 0.882, 'f1-score': 0.8972533062054934, 'support': 500.0}, '4': {'precision': 0.9288702928870293, 'recall': 0.888, 'f1-score': 0.9079754601226994, 'support': 500.0}, '5': {'precision': 0.9328859060402684, 'recall': 0.834, 'f1-score': 0.880675818373812, 'support': 500.0}, '6': {'precision': 0.9668141592920354, 'recall': 0.874, 'f1-score': 0.9180672268907563, 'support': 500.0}, '7': {'precision': 0.920814479638009, 'recall': 0.814, 'f1-score': 0.8641188959660296, 'support': 500.0}, '8': {'precision': 0.8288973384030418, 'recall': 0.872, 'f1-score': 0.8499025341130604, 'support': 500.0}, '9': {'precision': 0.9388646288209607, 'recall': 0.86, 'f1-score': 0.8977035490605427, 'support': 500.0}, '10': {'precision': 0.9334719334719335, 'recall': 0.898, 'f1-score': 0.9153924566768603, 'support': 500.0}, '11': {'precision': 0.9009661835748792, 'recall': 0.746, 'f1-score': 0.8161925601750547, 'support': 500.0}, '12': {'precision': 0.8458244111349036, 'recall': 0.79, 'f1-score': 0.8169596690796277, 'support': 500.0}, '13': {'precision': 0.8156312625250501, 'recall': 0.814, 'f1-score': 0.8148148148148149, 'support': 500.0}, '14': {'precision': 0.9142857142857143, 'recall': 0.96, 'f1-score': 0.9365853658536586, 'support': 500.0}, '15': {'precision': 0.8450704225352113, 'recall': 0.72, 'f1-score': 0.7775377969762419, 'support': 500.0}, '16': {'precision': 0.817047817047817, 'recall': 0.786, 'f1-score': 0.8012232415902141, 'support': 500.0}, '17': {'precision': 0.9739696312364425, 'recall': 0.898, 'f1-score': 0.9344432882414151, 'support': 500.0}, '18': {'precision': 0.8844621513944223, 'recall': 0.888, 'f1-score': 0.8862275449101796, 'support': 500.0}, '19': {'precision': 0.41304347826086957, 'recall': 0.76, 'f1-score': 0.5352112676056338, 'support': 100.0}, '20': {'precision': 0.371900826446281, 'recall': 0.9, 'f1-score': 0.5263157894736842, 'support': 100.0}, '21': {'precision': 0.22756410256410256, 'recall': 0.71, 'f1-score': 0.34466019417475724, 'support': 100.0}, '22': {'precision': 0.2663755458515284, 'recall': 0.61, 'f1-score': 0.37082066869300917, 'support': 100.0}, '23': {'precision': 0.28, 'recall': 0.07, 'f1-score': 0.112, 'support': 100.0}, 'accuracy': 0.8336, 'macro avg': {'precision': 0.7717198280454375, 'recall': 0.7963333333333334, 'f1-score': 0.7654802007957477, 'support': 10000.0}, 'weighted avg': {'precision': 0.8637084355296137, 'recall': 0.8336, 'f1-score': 0.8430159241570138, 'support': 10000.0}}
+MCP_retrain|improve_acc:-0.18%
+retrain_exp:1
+加载数据集
+Files already downloaded and verified
+Files already downloaded and verified
+加载retrained coarse model
+指定分裂的类别:19
+分裂的数据集的数量:500
+开始聚类｜簇数:5
+For n_clusters = 5, The average silhouette_score is : 0.5293994545936584
+聚类中心采样
+聚类边界采样
+随机采样
+DeepGini采样
+MCP采样
+1:构建聚类边界样本集
+采样的边界样本数量:52
+采样的边界标签数量统计:Counter({19: 13, 21: 11, 22: 10, 23: 10, 20: 8})
+2:构建聚类中心采样集
+采样的中心样本数量:52
+采样的中心标签数量统计:Counter({23: 12, 21: 11, 20: 11, 22: 10, 19: 8})
+3:构建随机采样集
+样本数量:52
+随机采样标签数量统计:Counter({23: 14, 22: 11, 19: 10, 21: 9, 20: 8})
+4:构建DeepGini采样集
+DeepGini采样样本数量:52
+DeepGini采样标签数量统计:Counter({20: 15, 19: 14, 23: 11, 22: 10, 21: 2})
+MCP采样样本数量:52
+MCP采样标签数量统计:Counter({20: 15, 22: 11, 21: 11, 19: 10, 23: 5})
+构建新场景数据集
+新场景样本数量:10000
+新场景样本标签数量统计:Counter({10: 500, 0: 500, 4: 500, 2: 500, 11: 500, 7: 500, 12: 500, 5: 500, 8: 500, 15: 500, 3: 500, 18: 500, 6: 500, 17: 500, 1: 500, 14: 500, 9: 500, 13: 500, 16: 500, 21: 100, 20: 100, 19: 100, 23: 100, 22: 100})
+构建出fine model
+用新场景数据集对initial_fine_model进行评估
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test loss:0.8571|Test accuracy:83.55%
+{'0': {'precision': 0.8044806517311609, 'recall': 0.79, 'f1-score': 0.7971745711402625, 'support': 500.0}, '1': {'precision': 0.823076923076923, 'recall': 0.856, 'f1-score': 0.8392156862745097, 'support': 500.0}, '2': {'precision': 0.9320388349514563, 'recall': 0.96, 'f1-score': 0.9458128078817734, 'support': 500.0}, '3': {'precision': 0.864244741873805, 'recall': 0.904, 'f1-score': 0.8836754643206256, 'support': 500.0}, '4': {'precision': 0.887378640776699, 'recall': 0.914, 'f1-score': 0.9004926108374385, 'support': 500.0}, '5': {'precision': 0.8269961977186312, 'recall': 0.87, 'f1-score': 0.847953216374269, 'support': 500.0}, '6': {'precision': 0.9166666666666666, 'recall': 0.924, 'f1-score': 0.9203187250996016, 'support': 500.0}, '7': {'precision': 0.8579881656804734, 'recall': 0.87, 'f1-score': 0.8639523336643495, 'support': 500.0}, '8': {'precision': 0.8469184890656064, 'recall': 0.852, 'f1-score': 0.8494516450648055, 'support': 500.0}, '9': {'precision': 0.7886855241264559, 'recall': 0.948, 'f1-score': 0.8610354223433242, 'support': 500.0}, '10': {'precision': 0.8908045977011494, 'recall': 0.93, 'f1-score': 0.9099804305283757, 'support': 500.0}, '11': {'precision': 0.8155339805825242, 'recall': 0.84, 'f1-score': 0.8275862068965517, 'support': 500.0}, '12': {'precision': 0.8484848484848485, 'recall': 0.784, 'f1-score': 0.814968814968815, 'support': 500.0}, '13': {'precision': 0.7976424361493124, 'recall': 0.812, 'f1-score': 0.804757185332012, 'support': 500.0}, '14': {'precision': 0.9264990328820116, 'recall': 0.958, 'f1-score': 0.9419862340216322, 'support': 500.0}, '15': {'precision': 0.7749003984063745, 'recall': 0.778, 'f1-score': 0.7764471057884232, 'support': 500.0}, '16': {'precision': 0.7857142857142857, 'recall': 0.814, 'f1-score': 0.7996070726915521, 'support': 500.0}, '17': {'precision': 0.9298245614035088, 'recall': 0.954, 'f1-score': 0.9417571569595261, 'support': 500.0}, '18': {'precision': 0.6453804347826086, 'recall': 0.95, 'f1-score': 0.7686084142394821, 'support': 500.0}, '19': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '20': {'precision': 1.0, 'recall': 0.01, 'f1-score': 0.019801980198019802, 'support': 100.0}, '21': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '22': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '23': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, 'accuracy': 0.8355, 'macro avg': {'precision': 0.7068024754906043, 'recall': 0.6965833333333333, 'f1-score': 0.6797742951927228, 'support': 10000.0}, 'weighted avg': {'precision': 0.8081629705887251, 'recall': 0.8355, 'f1-score': 0.8149370750233468, 'support': 10000.0}}
+开始retrain阶段
+1:聚类边界采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({5: 63, 13: 60, 16: 59, 10: 55, 14: 54, 11: 54, 15: 54, 6: 53, 12: 52, 2: 52, 1: 51, 3: 49, 0: 48, 7: 47, 18: 45, 17: 45, 9: 41, 8: 38, 4: 30, 19: 13, 21: 11, 22: 10, 23: 10, 20: 8})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.4052|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.2346|Train accuracy:94.8104%
+-----第2轮重训练开始------
+Train loss:0.1083|Train accuracy:96.7066%
+-----第3轮重训练开始------
+Train loss:0.0979|Train accuracy:98.4032%
+-----第4轮重训练开始------
+Train loss:0.0977|Train accuracy:98.3034%
+-----第5轮重训练开始------
+Train loss:0.0746|Train accuracy:98.503%
+-----第6轮重训练开始------
+Train loss:0.0614|Train accuracy:98.8024%
+-----第7轮重训练开始------
+Train loss:0.0523|Train accuracy:98.8024%
+-----第8轮重训练开始------
+Train loss:0.047|Train accuracy:99.2016%
+-----第9轮重训练开始------
+Train loss:0.0438|Train accuracy:99.501%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6716|Test accuracy:84.1%
+{'0': {'precision': 0.8913043478260869, 'recall': 0.738, 'f1-score': 0.8074398249452953, 'support': 500.0}, '1': {'precision': 0.8026070763500931, 'recall': 0.862, 'f1-score': 0.8312439729990356, 'support': 500.0}, '2': {'precision': 0.9125475285171103, 'recall': 0.96, 'f1-score': 0.9356725146198831, 'support': 500.0}, '3': {'precision': 0.9164926931106472, 'recall': 0.878, 'f1-score': 0.8968335035750766, 'support': 500.0}, '4': {'precision': 0.9279661016949152, 'recall': 0.876, 'f1-score': 0.9012345679012346, 'support': 500.0}, '5': {'precision': 0.9182795698924732, 'recall': 0.854, 'f1-score': 0.8849740932642487, 'support': 500.0}, '6': {'precision': 0.956989247311828, 'recall': 0.89, 'f1-score': 0.922279792746114, 'support': 500.0}, '7': {'precision': 0.9316628701594533, 'recall': 0.818, 'f1-score': 0.8711395101171459, 'support': 500.0}, '8': {'precision': 0.8441814595660749, 'recall': 0.856, 'f1-score': 0.8500496524329691, 'support': 500.0}, '9': {'precision': 0.9354838709677419, 'recall': 0.87, 'f1-score': 0.9015544041450777, 'support': 500.0}, '10': {'precision': 0.924643584521385, 'recall': 0.908, 'f1-score': 0.9162462159434914, 'support': 500.0}, '11': {'precision': 0.8717391304347826, 'recall': 0.802, 'f1-score': 0.8354166666666667, 'support': 500.0}, '12': {'precision': 0.825, 'recall': 0.792, 'f1-score': 0.8081632653061225, 'support': 500.0}, '13': {'precision': 0.8368200836820083, 'recall': 0.8, 'f1-score': 0.8179959100204499, 'support': 500.0}, '14': {'precision': 0.9332023575638507, 'recall': 0.95, 'f1-score': 0.9415262636273538, 'support': 500.0}, '15': {'precision': 0.8489702517162472, 'recall': 0.742, 'f1-score': 0.791889007470651, 'support': 500.0}, '16': {'precision': 0.774859287054409, 'recall': 0.826, 'f1-score': 0.7996127783155856, 'support': 500.0}, '17': {'precision': 0.9497991967871486, 'recall': 0.946, 'f1-score': 0.9478957915831663, 'support': 500.0}, '18': {'precision': 0.8455743879472694, 'recall': 0.898, 'f1-score': 0.8709990300678953, 'support': 500.0}, '19': {'precision': 0.44976076555023925, 'recall': 0.94, 'f1-score': 0.6084142394822006, 'support': 100.0}, '20': {'precision': 0.6413793103448275, 'recall': 0.93, 'f1-score': 0.7591836734693879, 'support': 100.0}, '21': {'precision': 0.08196721311475409, 'recall': 0.1, 'f1-score': 0.09009009009009009, 'support': 100.0}, '22': {'precision': 0.12295081967213115, 'recall': 0.15, 'f1-score': 0.13513513513513514, 'support': 100.0}, '23': {'precision': 0.30092592592592593, 'recall': 0.65, 'f1-score': 0.41139240506329117, 'support': 100.0}, 'accuracy': 0.841, 'macro avg': {'precision': 0.7685461283213084, 'recall': 0.7931666666666667, 'f1-score': 0.772349262874482, 'support': 10000.0}, 'weighted avg': {'precision': 0.858375992601255, 'recall': 0.841, 'f1-score': 0.8466504937197742, 'support': 10000.0}}
+boundary_retrain|improve_acc:0.55%
+2:聚类中心采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({3: 66, 2: 62, 18: 61, 1: 60, 12: 58, 7: 54, 15: 51, 5: 50, 10: 50, 8: 49, 4: 46, 0: 45, 17: 45, 14: 44, 9: 44, 6: 44, 16: 43, 13: 41, 11: 37, 23: 12, 21: 11, 20: 11, 22: 10, 19: 8})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3598|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.1712|Train accuracy:95.2096%
+-----第2轮重训练开始------
+Train loss:0.0697|Train accuracy:98.503%
+-----第3轮重训练开始------
+Train loss:0.0665|Train accuracy:99.1018%
+-----第4轮重训练开始------
+Train loss:0.0502|Train accuracy:99.7006%
+-----第5轮重训练开始------
+Train loss:0.0353|Train accuracy:99.8004%
+-----第6轮重训练开始------
+Train loss:0.0278|Train accuracy:99.9002%
+-----第7轮重训练开始------
+Train loss:0.0231|Train accuracy:99.9002%
+-----第8轮重训练开始------
+Train loss:0.0201|Train accuracy:99.9002%
+-----第9轮重训练开始------
+Train loss:0.0182|Train accuracy:99.9002%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6115|Test accuracy:85.36%
+{'0': {'precision': 0.7976190476190477, 'recall': 0.804, 'f1-score': 0.800796812749004, 'support': 500.0}, '1': {'precision': 0.8211538461538461, 'recall': 0.854, 'f1-score': 0.8372549019607843, 'support': 500.0}, '2': {'precision': 0.9233716475095786, 'recall': 0.964, 'f1-score': 0.9432485322896281, 'support': 500.0}, '3': {'precision': 0.9048582995951417, 'recall': 0.894, 'f1-score': 0.8993963782696178, 'support': 500.0}, '4': {'precision': 0.9098196392785571, 'recall': 0.908, 'f1-score': 0.908908908908909, 'support': 500.0}, '5': {'precision': 0.9195652173913044, 'recall': 0.846, 'f1-score': 0.88125, 'support': 500.0}, '6': {'precision': 0.9325153374233128, 'recall': 0.912, 'f1-score': 0.9221435793731042, 'support': 500.0}, '7': {'precision': 0.9311926605504587, 'recall': 0.812, 'f1-score': 0.8675213675213674, 'support': 500.0}, '8': {'precision': 0.8391472868217055, 'recall': 0.866, 'f1-score': 0.8523622047244095, 'support': 500.0}, '9': {'precision': 0.9077868852459017, 'recall': 0.886, 'f1-score': 0.8967611336032387, 'support': 500.0}, '10': {'precision': 0.9017681728880157, 'recall': 0.918, 'f1-score': 0.9098116947472745, 'support': 500.0}, '11': {'precision': 0.8417849898580122, 'recall': 0.83, 'f1-score': 0.8358509566968781, 'support': 500.0}, '12': {'precision': 0.8641425389755011, 'recall': 0.776, 'f1-score': 0.8177028451001054, 'support': 500.0}, '13': {'precision': 0.8648648648648649, 'recall': 0.768, 'f1-score': 0.8135593220338984, 'support': 500.0}, '14': {'precision': 0.9127134724857685, 'recall': 0.962, 'f1-score': 0.9367088607594936, 'support': 500.0}, '15': {'precision': 0.8277404921700223, 'recall': 0.74, 'f1-score': 0.7814149947201691, 'support': 500.0}, '16': {'precision': 0.7690875232774674, 'recall': 0.826, 'f1-score': 0.7965284474445515, 'support': 500.0}, '17': {'precision': 0.9299610894941635, 'recall': 0.956, 'f1-score': 0.9428007889546351, 'support': 500.0}, '18': {'precision': 0.9237472766884531, 'recall': 0.848, 'f1-score': 0.8842544316996872, 'support': 500.0}, '19': {'precision': 0.7926829268292683, 'recall': 0.65, 'f1-score': 0.7142857142857142, 'support': 100.0}, '20': {'precision': 0.7565217391304347, 'recall': 0.87, 'f1-score': 0.8093023255813954, 'support': 100.0}, '21': {'precision': 0.47019867549668876, 'recall': 0.71, 'f1-score': 0.5657370517928286, 'support': 100.0}, '22': {'precision': 0.5909090909090909, 'recall': 0.78, 'f1-score': 0.6724137931034482, 'support': 100.0}, '23': {'precision': 0.2347417840375587, 'recall': 0.5, 'f1-score': 0.3194888178913738, 'support': 100.0}, 'accuracy': 0.8536, 'macro avg': {'precision': 0.8153289376955902, 'recall': 0.8283333333333333, 'f1-score': 0.8170626610088133, 'support': 10000.0}, 'weighted avg': {'precision': 0.8645925565785865, 'recall': 0.8536, 'f1-score': 0.8572260851043855, 'support': 10000.0}}
+center_retrain|improve_acc:1.81%
+3:随机采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({8: 63, 10: 62, 12: 59, 16: 58, 5: 52, 15: 51, 7: 51, 17: 51, 18: 50, 6: 49, 4: 48, 1: 47, 13: 47, 3: 47, 11: 45, 9: 44, 14: 44, 0: 43, 2: 39, 23: 14, 22: 11, 19: 10, 21: 9, 20: 8})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3687|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.2004|Train accuracy:95.2096%
+-----第2轮重训练开始------
+Train loss:0.0925|Train accuracy:96.507%
+-----第3轮重训练开始------
+Train loss:0.0888|Train accuracy:97.505%
+-----第4轮重训练开始------
+Train loss:0.0764|Train accuracy:98.6028%
+-----第5轮重训练开始------
+Train loss:0.0582|Train accuracy:98.8024%
+-----第6轮重训练开始------
+Train loss:0.0466|Train accuracy:99.2016%
+-----第7轮重训练开始------
+Train loss:0.0386|Train accuracy:99.501%
+-----第8轮重训练开始------
+Train loss:0.0343|Train accuracy:99.7006%
+-----第9轮重训练开始------
+Train loss:0.0313|Train accuracy:99.7006%
+(4) 开始对retrained_fine_model eval
+Test loss:0.637|Test accuracy:84.79%
+{'0': {'precision': 0.8135245901639344, 'recall': 0.794, 'f1-score': 0.8036437246963564, 'support': 500.0}, '1': {'precision': 0.8607594936708861, 'recall': 0.816, 'f1-score': 0.837782340862423, 'support': 500.0}, '2': {'precision': 0.946, 'recall': 0.946, 'f1-score': 0.946, 'support': 500.0}, '3': {'precision': 0.9094650205761317, 'recall': 0.884, 'f1-score': 0.8965517241379309, 'support': 500.0}, '4': {'precision': 0.9074446680080482, 'recall': 0.902, 'f1-score': 0.9047141424272819, 'support': 500.0}, '5': {'precision': 0.9125799573560768, 'recall': 0.856, 'f1-score': 0.8833849329205367, 'support': 500.0}, '6': {'precision': 0.9399585921325052, 'recall': 0.908, 'f1-score': 0.9237029501525941, 'support': 500.0}, '7': {'precision': 0.8958333333333334, 'recall': 0.86, 'f1-score': 0.8775510204081632, 'support': 500.0}, '8': {'precision': 0.8643724696356275, 'recall': 0.854, 'f1-score': 0.8591549295774648, 'support': 500.0}, '9': {'precision': 0.9459459459459459, 'recall': 0.84, 'f1-score': 0.8898305084745762, 'support': 500.0}, '10': {'precision': 0.927536231884058, 'recall': 0.896, 'f1-score': 0.9114954221770092, 'support': 500.0}, '11': {'precision': 0.8744493392070485, 'recall': 0.794, 'f1-score': 0.8322851153039832, 'support': 500.0}, '12': {'precision': 0.8741418764302059, 'recall': 0.764, 'f1-score': 0.8153681963713981, 'support': 500.0}, '13': {'precision': 0.8361344537815126, 'recall': 0.796, 'f1-score': 0.8155737704918034, 'support': 500.0}, '14': {'precision': 0.9157088122605364, 'recall': 0.956, 'f1-score': 0.9354207436399217, 'support': 500.0}, '15': {'precision': 0.8504672897196262, 'recall': 0.728, 'f1-score': 0.7844827586206896, 'support': 500.0}, '16': {'precision': 0.7648148148148148, 'recall': 0.826, 'f1-score': 0.7942307692307692, 'support': 500.0}, '17': {'precision': 0.9368836291913215, 'recall': 0.95, 'f1-score': 0.9433962264150944, 'support': 500.0}, '18': {'precision': 0.8825910931174089, 'recall': 0.872, 'f1-score': 0.8772635814889336, 'support': 500.0}, '19': {'precision': 0.6417910447761194, 'recall': 0.86, 'f1-score': 0.735042735042735, 'support': 100.0}, '20': {'precision': 0.8090909090909091, 'recall': 0.89, 'f1-score': 0.8476190476190476, 'support': 100.0}, '21': {'precision': 0.4266666666666667, 'recall': 0.64, 'f1-score': 0.512, 'support': 100.0}, '22': {'precision': 0.18487394957983194, 'recall': 0.44, 'f1-score': 0.26035502958579887, 'support': 100.0}, '23': {'precision': 0.35377358490566035, 'recall': 0.75, 'f1-score': 0.48076923076923084, 'support': 100.0}, 'accuracy': 0.8479, 'macro avg': {'precision': 0.803116990260342, 'recall': 0.8259166666666667, 'f1-score': 0.8069841208505726, 'support': 10000.0}, 'weighted avg': {'precision': 0.867092542111643, 'recall': 0.8479, 'f1-score': 0.8549495033000146, 'support': 10000.0}}
+random_retrain|improve_acc:1.24%
+4:DeepGini采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({10: 65, 6: 65, 13: 61, 3: 56, 2: 55, 17: 52, 15: 51, 14: 50, 1: 50, 16: 50, 4: 49, 9: 49, 7: 48, 18: 47, 8: 44, 11: 42, 0: 40, 12: 38, 5: 38, 20: 15, 19: 14, 23: 11, 22: 10, 21: 2})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3491|Train accuracy:94.6108%
+-----第1轮重训练开始------
+Train loss:0.1971|Train accuracy:94.8104%
+-----第2轮重训练开始------
+Train loss:0.0928|Train accuracy:97.1058%
+-----第3轮重训练开始------
+Train loss:0.0834|Train accuracy:98.503%
+-----第4轮重训练开始------
+Train loss:0.0839|Train accuracy:98.503%
+-----第5轮重训练开始------
+Train loss:0.0667|Train accuracy:98.503%
+-----第6轮重训练开始------
+Train loss:0.0566|Train accuracy:98.503%
+-----第7轮重训练开始------
+Train loss:0.0499|Train accuracy:98.7026%
+-----第8轮重训练开始------
+Train loss:0.0448|Train accuracy:99.3014%
+-----第9轮重训练开始------
+Train loss:0.0415|Train accuracy:99.501%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6943|Test accuracy:84.32%
+{'0': {'precision': 0.798804780876494, 'recall': 0.802, 'f1-score': 0.8003992015968063, 'support': 500.0}, '1': {'precision': 0.8273809523809523, 'recall': 0.834, 'f1-score': 0.8306772908366534, 'support': 500.0}, '2': {'precision': 0.9425742574257425, 'recall': 0.952, 'f1-score': 0.9472636815920397, 'support': 500.0}, '3': {'precision': 0.925531914893617, 'recall': 0.87, 'f1-score': 0.8969072164948454, 'support': 500.0}, '4': {'precision': 0.9, 'recall': 0.918, 'f1-score': 0.9089108910891089, 'support': 500.0}, '5': {'precision': 0.9274725274725275, 'recall': 0.844, 'f1-score': 0.8837696335078533, 'support': 500.0}, '6': {'precision': 0.9529914529914529, 'recall': 0.892, 'f1-score': 0.921487603305785, 'support': 500.0}, '7': {'precision': 0.9359267734553776, 'recall': 0.818, 'f1-score': 0.8729989327641409, 'support': 500.0}, '8': {'precision': 0.8588709677419355, 'recall': 0.852, 'f1-score': 0.855421686746988, 'support': 500.0}, '9': {'precision': 0.8661710037174721, 'recall': 0.932, 'f1-score': 0.8978805394990367, 'support': 500.0}, '10': {'precision': 0.926829268292683, 'recall': 0.912, 'f1-score': 0.9193548387096775, 'support': 500.0}, '11': {'precision': 0.8823529411764706, 'recall': 0.78, 'f1-score': 0.8280254777070064, 'support': 500.0}, '12': {'precision': 0.8590308370044053, 'recall': 0.78, 'f1-score': 0.8176100628930818, 'support': 500.0}, '13': {'precision': 0.8019607843137255, 'recall': 0.818, 'f1-score': 0.80990099009901, 'support': 500.0}, '14': {'precision': 0.9173076923076923, 'recall': 0.954, 'f1-score': 0.9352941176470588, 'support': 500.0}, '15': {'precision': 0.8756476683937824, 'recall': 0.676, 'f1-score': 0.7629796839729119, 'support': 500.0}, '16': {'precision': 0.7941176470588235, 'recall': 0.81, 'f1-score': 0.801980198019802, 'support': 500.0}, '17': {'precision': 0.9474747474747475, 'recall': 0.938, 'f1-score': 0.942713567839196, 'support': 500.0}, '18': {'precision': 0.8560311284046692, 'recall': 0.88, 'f1-score': 0.8678500986193294, 'support': 500.0}, '19': {'precision': 0.31954887218045114, 'recall': 0.85, 'f1-score': 0.4644808743169399, 'support': 100.0}, '20': {'precision': 0.43457943925233644, 'recall': 0.93, 'f1-score': 0.5923566878980892, 'support': 100.0}, '21': {'precision': 1.0, 'recall': 0.02, 'f1-score': 0.0392156862745098, 'support': 100.0}, '22': {'precision': 0.37748344370860926, 'recall': 0.57, 'f1-score': 0.45418326693227085, 'support': 100.0}, '23': {'precision': 0.4025157232704403, 'recall': 0.64, 'f1-score': 0.4942084942084943, 'support': 100.0}, 'accuracy': 0.8432, 'macro avg': {'precision': 0.8054418676581004, 'recall': 0.8029999999999999, 'f1-score': 0.7727446134404431, 'support': 10000.0}, 'weighted avg': {'precision': 0.8651651420532469, 'recall': 0.8432, 'f1-score': 0.8455157357433196, 'support': 10000.0}}
+DeepGini_retrain|improve_acc:0.77%
+5:MCP采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({13: 60, 0: 59, 3: 58, 6: 57, 10: 57, 18: 57, 9: 56, 8: 54, 2: 54, 5: 52, 11: 48, 12: 47, 1: 47, 7: 46, 4: 44, 14: 43, 16: 41, 15: 41, 17: 29, 20: 15, 22: 11, 21: 11, 19: 10, 23: 5})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.4317|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.2724|Train accuracy:95.01%
+-----第2轮重训练开始------
+Train loss:0.1222|Train accuracy:96.4072%
+-----第3轮重训练开始------
+Train loss:0.113|Train accuracy:97.4052%
+-----第4轮重训练开始------
+Train loss:0.1062|Train accuracy:97.2056%
+-----第5轮重训练开始------
+Train loss:0.0799|Train accuracy:97.7046%
+-----第6轮重训练开始------
+Train loss:0.0643|Train accuracy:98.503%
+-----第7轮重训练开始------
+Train loss:0.0572|Train accuracy:98.7026%
+-----第8轮重训练开始------
+Train loss:0.0542|Train accuracy:99.1018%
+-----第9轮重训练开始------
+Train loss:0.0493|Train accuracy:99.3014%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6884|Test accuracy:83.42%
+{'0': {'precision': 0.8259023354564756, 'recall': 0.778, 'f1-score': 0.8012358393408857, 'support': 500.0}, '1': {'precision': 0.8491735537190083, 'recall': 0.822, 'f1-score': 0.8353658536585366, 'support': 500.0}, '2': {'precision': 0.9609053497942387, 'recall': 0.934, 'f1-score': 0.9472616632860041, 'support': 500.0}, '3': {'precision': 0.92, 'recall': 0.874, 'f1-score': 0.8964102564102564, 'support': 500.0}, '4': {'precision': 0.9151515151515152, 'recall': 0.906, 'f1-score': 0.9105527638190954, 'support': 500.0}, '5': {'precision': 0.91792656587473, 'recall': 0.85, 'f1-score': 0.8826583592938734, 'support': 500.0}, '6': {'precision': 0.9646799116997793, 'recall': 0.874, 'f1-score': 0.9171038824763904, 'support': 500.0}, '7': {'precision': 0.9256756756756757, 'recall': 0.822, 'f1-score': 0.8707627118644068, 'support': 500.0}, '8': {'precision': 0.8481262327416174, 'recall': 0.86, 'f1-score': 0.8540218470705065, 'support': 500.0}, '9': {'precision': 0.9491916859122402, 'recall': 0.822, 'f1-score': 0.8810289389067524, 'support': 500.0}, '10': {'precision': 0.9440860215053763, 'recall': 0.878, 'f1-score': 0.9098445595854923, 'support': 500.0}, '11': {'precision': 0.8853211009174312, 'recall': 0.772, 'f1-score': 0.8247863247863247, 'support': 500.0}, '12': {'precision': 0.8466522678185745, 'recall': 0.784, 'f1-score': 0.814122533748702, 'support': 500.0}, '13': {'precision': 0.826722338204593, 'recall': 0.792, 'f1-score': 0.8089887640449438, 'support': 500.0}, '14': {'precision': 0.9384920634920635, 'recall': 0.946, 'f1-score': 0.9422310756972111, 'support': 500.0}, '15': {'precision': 0.8245614035087719, 'recall': 0.752, 'f1-score': 0.7866108786610879, 'support': 500.0}, '16': {'precision': 0.7842003853564548, 'recall': 0.814, 'f1-score': 0.7988223748773308, 'support': 500.0}, '17': {'precision': 0.9681528662420382, 'recall': 0.912, 'f1-score': 0.9392378990731205, 'support': 500.0}, '18': {'precision': 0.8666666666666667, 'recall': 0.884, 'f1-score': 0.8752475247524752, 'support': 500.0}, '19': {'precision': 0.33658536585365856, 'recall': 0.69, 'f1-score': 0.4524590163934426, 'support': 100.0}, '20': {'precision': 0.3770491803278688, 'recall': 0.92, 'f1-score': 0.5348837209302325, 'support': 100.0}, '21': {'precision': 0.24372759856630824, 'recall': 0.68, 'f1-score': 0.35883905013192613, 'support': 100.0}, '22': {'precision': 0.2928870292887029, 'recall': 0.7, 'f1-score': 0.41297935103244837, 'support': 100.0}, '23': {'precision': 0.2631578947368421, 'recall': 0.05, 'f1-score': 0.08403361344537816, 'support': 100.0}, 'accuracy': 0.8342, 'macro avg': {'precision': 0.769791458687943, 'recall': 0.7965, 'f1-score': 0.7641453668036178, 'support': 10000.0}, 'weighted avg': {'precision': 0.8632134676745962, 'recall': 0.8342, 'f1-score': 0.8432466500870042, 'support': 10000.0}}
+MCP_retrain|improve_acc:-0.13%
+retrain_exp:2
+加载数据集
+Files already downloaded and verified
+Files already downloaded and verified
+加载retrained coarse model
+指定分裂的类别:19
+分裂的数据集的数量:500
+开始聚类｜簇数:5
+For n_clusters = 5, The average silhouette_score is : 0.5210765600204468
+聚类中心采样
+聚类边界采样
+随机采样
+DeepGini采样
+MCP采样
+1:构建聚类边界样本集
+采样的边界样本数量:52
+采样的边界标签数量统计:Counter({23: 15, 19: 13, 22: 11, 20: 8, 21: 5})
+2:构建聚类中心采样集
+采样的中心样本数量:52
+采样的中心标签数量统计:Counter({21: 12, 23: 12, 22: 10, 20: 10, 19: 8})
+3:构建随机采样集
+样本数量:52
+随机采样标签数量统计:Counter({20: 15, 19: 11, 21: 11, 22: 8, 23: 7})
+4:构建DeepGini采样集
+DeepGini采样样本数量:52
+DeepGini采样标签数量统计:Counter({20: 15, 19: 14, 23: 11, 22: 10, 21: 2})
+MCP采样样本数量:52
+MCP采样标签数量统计:Counter({20: 15, 22: 11, 21: 11, 19: 10, 23: 5})
+构建新场景数据集
+新场景样本数量:10000
+新场景样本标签数量统计:Counter({10: 500, 0: 500, 4: 500, 2: 500, 11: 500, 7: 500, 12: 500, 5: 500, 8: 500, 15: 500, 3: 500, 18: 500, 6: 500, 17: 500, 1: 500, 14: 500, 9: 500, 13: 500, 16: 500, 21: 100, 20: 100, 19: 100, 23: 100, 22: 100})
+构建出fine model
+用新场景数据集对initial_fine_model进行评估
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test loss:0.8982|Test accuracy:83.54%
+{'0': {'precision': 0.8044806517311609, 'recall': 0.79, 'f1-score': 0.7971745711402625, 'support': 500.0}, '1': {'precision': 0.823076923076923, 'recall': 0.856, 'f1-score': 0.8392156862745097, 'support': 500.0}, '2': {'precision': 0.9320388349514563, 'recall': 0.96, 'f1-score': 0.9458128078817734, 'support': 500.0}, '3': {'precision': 0.864244741873805, 'recall': 0.904, 'f1-score': 0.8836754643206256, 'support': 500.0}, '4': {'precision': 0.887378640776699, 'recall': 0.914, 'f1-score': 0.9004926108374385, 'support': 500.0}, '5': {'precision': 0.8269961977186312, 'recall': 0.87, 'f1-score': 0.847953216374269, 'support': 500.0}, '6': {'precision': 0.9166666666666666, 'recall': 0.924, 'f1-score': 0.9203187250996016, 'support': 500.0}, '7': {'precision': 0.8579881656804734, 'recall': 0.87, 'f1-score': 0.8639523336643495, 'support': 500.0}, '8': {'precision': 0.8469184890656064, 'recall': 0.852, 'f1-score': 0.8494516450648055, 'support': 500.0}, '9': {'precision': 0.7886855241264559, 'recall': 0.948, 'f1-score': 0.8610354223433242, 'support': 500.0}, '10': {'precision': 0.8891013384321224, 'recall': 0.93, 'f1-score': 0.9090909090909091, 'support': 500.0}, '11': {'precision': 0.8155339805825242, 'recall': 0.84, 'f1-score': 0.8275862068965517, 'support': 500.0}, '12': {'precision': 0.8484848484848485, 'recall': 0.784, 'f1-score': 0.814968814968815, 'support': 500.0}, '13': {'precision': 0.7976424361493124, 'recall': 0.812, 'f1-score': 0.804757185332012, 'support': 500.0}, '14': {'precision': 0.9264990328820116, 'recall': 0.958, 'f1-score': 0.9419862340216322, 'support': 500.0}, '15': {'precision': 0.7749003984063745, 'recall': 0.778, 'f1-score': 0.7764471057884232, 'support': 500.0}, '16': {'precision': 0.7857142857142857, 'recall': 0.814, 'f1-score': 0.7996070726915521, 'support': 500.0}, '17': {'precision': 0.9298245614035088, 'recall': 0.954, 'f1-score': 0.9417571569595261, 'support': 500.0}, '18': {'precision': 0.6453804347826086, 'recall': 0.95, 'f1-score': 0.7686084142394821, 'support': 500.0}, '19': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '20': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '21': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '22': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '23': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, 'accuracy': 0.8354, 'macro avg': {'precision': 0.665064839687728, 'recall': 0.6961666666666666, 'f1-score': 0.6789121492912442, 'support': 10000.0}, 'weighted avg': {'precision': 0.7980778076252737, 'recall': 0.8354, 'f1-score': 0.8146945791494931, 'support': 10000.0}}
+开始retrain阶段
+1:聚类边界采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({14: 60, 4: 60, 13: 60, 17: 58, 12: 58, 18: 51, 16: 50, 2: 50, 5: 50, 1: 50, 3: 49, 10: 48, 7: 47, 8: 47, 9: 45, 0: 45, 6: 43, 11: 41, 15: 38, 23: 15, 19: 13, 22: 11, 20: 8, 21: 5})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3971|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.229|Train accuracy:95.1098%
+-----第2轮重训练开始------
+Train loss:0.123|Train accuracy:96.6068%
+-----第3轮重训练开始------
+Train loss:0.1118|Train accuracy:96.4072%
+-----第4轮重训练开始------
+Train loss:0.0958|Train accuracy:97.505%
+-----第5轮重训练开始------
+Train loss:0.0741|Train accuracy:98.3034%
+-----第6轮重训练开始------
+Train loss:0.0629|Train accuracy:98.6028%
+-----第7轮重训练开始------
+Train loss:0.0541|Train accuracy:98.8024%
+-----第8轮重训练开始------
+Train loss:0.0484|Train accuracy:99.1018%
+-----第9轮重训练开始------
+Train loss:0.0438|Train accuracy:99.4012%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6778|Test accuracy:84.2%
+{'0': {'precision': 0.8438177874186551, 'recall': 0.778, 'f1-score': 0.809573361082206, 'support': 500.0}, '1': {'precision': 0.8565310492505354, 'recall': 0.8, 'f1-score': 0.827300930713547, 'support': 500.0}, '2': {'precision': 0.9330708661417323, 'recall': 0.948, 'f1-score': 0.9404761904761905, 'support': 500.0}, '3': {'precision': 0.9175475687103594, 'recall': 0.868, 'f1-score': 0.8920863309352518, 'support': 500.0}, '4': {'precision': 0.9105691056910569, 'recall': 0.896, 'f1-score': 0.903225806451613, 'support': 500.0}, '5': {'precision': 0.9345372460496614, 'recall': 0.828, 'f1-score': 0.8780487804878049, 'support': 500.0}, '6': {'precision': 0.9320987654320988, 'recall': 0.906, 'f1-score': 0.9188640973630832, 'support': 500.0}, '7': {'precision': 0.9186813186813186, 'recall': 0.836, 'f1-score': 0.875392670157068, 'support': 500.0}, '8': {'precision': 0.852882703777336, 'recall': 0.858, 'f1-score': 0.8554336989032901, 'support': 500.0}, '9': {'precision': 0.925, 'recall': 0.888, 'f1-score': 0.9061224489795918, 'support': 500.0}, '10': {'precision': 0.9195171026156942, 'recall': 0.914, 'f1-score': 0.9167502507522568, 'support': 500.0}, '11': {'precision': 0.8891402714932126, 'recall': 0.786, 'f1-score': 0.8343949044585988, 'support': 500.0}, '12': {'precision': 0.8243801652892562, 'recall': 0.798, 'f1-score': 0.8109756097560975, 'support': 500.0}, '13': {'precision': 0.8172690763052208, 'recall': 0.814, 'f1-score': 0.8156312625250499, 'support': 500.0}, '14': {'precision': 0.9299610894941635, 'recall': 0.956, 'f1-score': 0.9428007889546351, 'support': 500.0}, '15': {'precision': 0.8390022675736961, 'recall': 0.74, 'f1-score': 0.7863974495217853, 'support': 500.0}, '16': {'precision': 0.77196261682243, 'recall': 0.826, 'f1-score': 0.7980676328502416, 'support': 500.0}, '17': {'precision': 0.9759825327510917, 'recall': 0.894, 'f1-score': 0.9331941544885177, 'support': 500.0}, '18': {'precision': 0.8539325842696629, 'recall': 0.912, 'f1-score': 0.8820116054158608, 'support': 500.0}, '19': {'precision': 0.3375, 'recall': 0.81, 'f1-score': 0.4764705882352942, 'support': 100.0}, '20': {'precision': 0.6666666666666666, 'recall': 0.82, 'f1-score': 0.7354260089686099, 'support': 100.0}, '21': {'precision': 0.11538461538461539, 'recall': 0.03, 'f1-score': 0.047619047619047616, 'support': 100.0}, '22': {'precision': 0.2303370786516854, 'recall': 0.41, 'f1-score': 0.2949640287769784, 'support': 100.0}, '23': {'precision': 0.3435114503816794, 'recall': 0.9, 'f1-score': 0.49723756906077354, 'support': 100.0}, 'accuracy': 0.842, 'macro avg': {'precision': 0.7724701637021596, 'recall': 0.8006666666666667, 'f1-score': 0.7741027173722248, 'support': 10000.0}, 'weighted avg': {'precision': 0.8592282039992055, 'recall': 0.842, 'f1-score': 0.8468545711402415, 'support': 10000.0}}
+boundary_retrain|improve_acc:0.66%
+2:聚类中心采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({10: 68, 16: 64, 13: 61, 8: 55, 18: 55, 0: 55, 17: 54, 1: 51, 4: 51, 9: 50, 2: 50, 14: 48, 5: 45, 15: 44, 3: 43, 11: 42, 12: 41, 6: 39, 7: 34, 21: 12, 23: 12, 22: 10, 20: 10, 19: 8})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3949|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.2133|Train accuracy:95.01%
+-----第2轮重训练开始------
+Train loss:0.0764|Train accuracy:97.8044%
+-----第3轮重训练开始------
+Train loss:0.073|Train accuracy:99.2016%
+-----第4轮重训练开始------
+Train loss:0.0641|Train accuracy:99.1018%
+-----第5轮重训练开始------
+Train loss:0.0432|Train accuracy:99.4012%
+-----第6轮重训练开始------
+Train loss:0.0332|Train accuracy:99.4012%
+-----第7轮重训练开始------
+Train loss:0.0276|Train accuracy:99.8004%
+-----第8轮重训练开始------
+Train loss:0.0243|Train accuracy:99.8004%
+-----第9轮重训练开始------
+Train loss:0.022|Train accuracy:99.8004%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6132|Test accuracy:85.11%
+{'0': {'precision': 0.7531760435571688, 'recall': 0.83, 'f1-score': 0.7897240723120837, 'support': 500.0}, '1': {'precision': 0.84472049689441, 'recall': 0.816, 'f1-score': 0.8301119023397762, 'support': 500.0}, '2': {'precision': 0.9198473282442748, 'recall': 0.964, 'f1-score': 0.94140625, 'support': 500.0}, '3': {'precision': 0.9065040650406504, 'recall': 0.892, 'f1-score': 0.8991935483870968, 'support': 500.0}, '4': {'precision': 0.9163265306122449, 'recall': 0.898, 'f1-score': 0.907070707070707, 'support': 500.0}, '5': {'precision': 0.89937106918239, 'recall': 0.858, 'f1-score': 0.8781985670419652, 'support': 500.0}, '6': {'precision': 0.934156378600823, 'recall': 0.908, 'f1-score': 0.9208924949290062, 'support': 500.0}, '7': {'precision': 0.885480572597137, 'recall': 0.866, 'f1-score': 0.8756319514661274, 'support': 500.0}, '8': {'precision': 0.838150289017341, 'recall': 0.87, 'f1-score': 0.8537782139352307, 'support': 500.0}, '9': {'precision': 0.9208333333333333, 'recall': 0.884, 'f1-score': 0.9020408163265305, 'support': 500.0}, '10': {'precision': 0.9297520661157025, 'recall': 0.9, 'f1-score': 0.9146341463414634, 'support': 500.0}, '11': {'precision': 0.868995633187773, 'recall': 0.796, 'f1-score': 0.8308977035490606, 'support': 500.0}, '12': {'precision': 0.8561946902654868, 'recall': 0.774, 'f1-score': 0.8130252100840336, 'support': 500.0}, '13': {'precision': 0.8412017167381974, 'recall': 0.784, 'f1-score': 0.8115942028985508, 'support': 500.0}, '14': {'precision': 0.9211538461538461, 'recall': 0.958, 'f1-score': 0.9392156862745097, 'support': 500.0}, '15': {'precision': 0.8688118811881188, 'recall': 0.702, 'f1-score': 0.7765486725663716, 'support': 500.0}, '16': {'precision': 0.7669172932330827, 'recall': 0.816, 'f1-score': 0.7906976744186045, 'support': 500.0}, '17': {'precision': 0.9262135922330097, 'recall': 0.954, 'f1-score': 0.9399014778325123, 'support': 500.0}, '18': {'precision': 0.9488372093023256, 'recall': 0.816, 'f1-score': 0.8774193548387096, 'support': 500.0}, '19': {'precision': 0.8795180722891566, 'recall': 0.73, 'f1-score': 0.7978142076502732, 'support': 100.0}, '20': {'precision': 0.7699115044247787, 'recall': 0.87, 'f1-score': 0.8169014084507041, 'support': 100.0}, '21': {'precision': 0.41, 'recall': 0.82, 'f1-score': 0.5466666666666666, 'support': 100.0}, '22': {'precision': 0.4556213017751479, 'recall': 0.77, 'f1-score': 0.5724907063197027, 'support': 100.0}, '23': {'precision': 0.2677595628415301, 'recall': 0.49, 'f1-score': 0.3462897526501767, 'support': 100.0}, 'accuracy': 0.8511, 'macro avg': {'precision': 0.8137272698678304, 'recall': 0.8319166666666667, 'f1-score': 0.8155060580979109, 'support': 10000.0}, 'weighted avg': {'precision': 0.8651603061881719, 'recall': 0.8511, 'f1-score': 0.8554007600479923, 'support': 10000.0}}
+center_retrain|improve_acc:1.57%
+3:随机采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({12: 63, 8: 60, 3: 59, 18: 56, 1: 56, 7: 53, 11: 52, 6: 52, 17: 52, 16: 52, 4: 52, 2: 50, 9: 49, 13: 47, 10: 46, 5: 42, 14: 39, 0: 36, 15: 34, 20: 15, 19: 11, 21: 11, 22: 8, 23: 7})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.4036|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.2165|Train accuracy:95.1098%
+-----第2轮重训练开始------
+Train loss:0.0938|Train accuracy:96.9062%
+-----第3轮重训练开始------
+Train loss:0.0832|Train accuracy:98.1038%
+-----第4轮重训练开始------
+Train loss:0.0774|Train accuracy:98.7026%
+-----第5轮重训练开始------
+Train loss:0.0552|Train accuracy:99.1018%
+-----第6轮重训练开始------
+Train loss:0.046|Train accuracy:98.9022%
+-----第7轮重训练开始------
+Train loss:0.0387|Train accuracy:99.1018%
+-----第8轮重训练开始------
+Train loss:0.0344|Train accuracy:99.4012%
+-----第9轮重训练开始------
+Train loss:0.0316|Train accuracy:99.6008%
+(4) 开始对retrained_fine_model eval
+Test loss:0.643|Test accuracy:84.77%
+{'0': {'precision': 0.7818532818532818, 'recall': 0.81, 'f1-score': 0.7956777996070726, 'support': 500.0}, '1': {'precision': 0.8236434108527132, 'recall': 0.85, 'f1-score': 0.8366141732283465, 'support': 500.0}, '2': {'precision': 0.9163498098859315, 'recall': 0.964, 'f1-score': 0.9395711500974658, 'support': 500.0}, '3': {'precision': 0.9247311827956989, 'recall': 0.86, 'f1-score': 0.8911917098445595, 'support': 500.0}, '4': {'precision': 0.9074446680080482, 'recall': 0.902, 'f1-score': 0.9047141424272819, 'support': 500.0}, '5': {'precision': 0.9290465631929047, 'recall': 0.838, 'f1-score': 0.8811777076761304, 'support': 500.0}, '6': {'precision': 0.9431578947368421, 'recall': 0.896, 'f1-score': 0.918974358974359, 'support': 500.0}, '7': {'precision': 0.9400921658986175, 'recall': 0.816, 'f1-score': 0.8736616702355461, 'support': 500.0}, '8': {'precision': 0.8580121703853956, 'recall': 0.846, 'f1-score': 0.8519637462235649, 'support': 500.0}, '9': {'precision': 0.9381898454746137, 'recall': 0.85, 'f1-score': 0.8919202518363064, 'support': 500.0}, '10': {'precision': 0.9188640973630832, 'recall': 0.906, 'f1-score': 0.9123867069486405, 'support': 500.0}, '11': {'precision': 0.8577405857740585, 'recall': 0.82, 'f1-score': 0.838445807770961, 'support': 500.0}, '12': {'precision': 0.8376068376068376, 'recall': 0.784, 'f1-score': 0.809917355371901, 'support': 500.0}, '13': {'precision': 0.8305785123966942, 'recall': 0.804, 'f1-score': 0.8170731707317074, 'support': 500.0}, '14': {'precision': 0.9096045197740112, 'recall': 0.966, 'f1-score': 0.9369544131910765, 'support': 500.0}, '15': {'precision': 0.8804071246819338, 'recall': 0.692, 'f1-score': 0.7749160134378499, 'support': 500.0}, '16': {'precision': 0.7657992565055762, 'recall': 0.824, 'f1-score': 0.7938342967244703, 'support': 500.0}, '17': {'precision': 0.931640625, 'recall': 0.954, 'f1-score': 0.9426877470355731, 'support': 500.0}, '18': {'precision': 0.9333333333333333, 'recall': 0.812, 'f1-score': 0.8684491978609625, 'support': 500.0}, '19': {'precision': 0.4869109947643979, 'recall': 0.93, 'f1-score': 0.6391752577319587, 'support': 100.0}, '20': {'precision': 0.5625, 'recall': 0.9, 'f1-score': 0.6923076923076923, 'support': 100.0}, '21': {'precision': 0.38860103626943004, 'recall': 0.75, 'f1-score': 0.5119453924914675, 'support': 100.0}, '22': {'precision': 0.2565789473684211, 'recall': 0.39, 'f1-score': 0.30952380952380953, 'support': 100.0}, '23': {'precision': 0.5763888888888888, 'recall': 0.83, 'f1-score': 0.680327868852459, 'support': 100.0}, 'accuracy': 0.8477, 'macro avg': {'precision': 0.7957948230337797, 'recall': 0.8330833333333333, 'f1-score': 0.8047254766721318, 'support': 10000.0}, 'weighted avg': {'precision': 0.8641145929488901, 'recall': 0.8477, 'f1-score': 0.8523393711702625, 'support': 10000.0}}
+random_retrain|improve_acc:1.23%
+4:DeepGini采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({4: 63, 8: 61, 14: 57, 16: 56, 13: 55, 17: 54, 2: 53, 9: 52, 18: 51, 0: 50, 3: 50, 11: 49, 7: 49, 15: 47, 6: 45, 1: 45, 10: 39, 12: 38, 5: 36, 20: 15, 19: 14, 23: 11, 22: 10, 21: 2})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3635|Train accuracy:94.7106%
+-----第1轮重训练开始------
+Train loss:0.2066|Train accuracy:94.7106%
+-----第2轮重训练开始------
+Train loss:0.0933|Train accuracy:96.008%
+-----第3轮重训练开始------
+Train loss:0.0867|Train accuracy:97.6048%
+-----第4轮重训练开始------
+Train loss:0.0872|Train accuracy:97.8044%
+-----第5轮重训练开始------
+Train loss:0.0656|Train accuracy:98.6028%
+-----第6轮重训练开始------
+Train loss:0.0557|Train accuracy:98.6028%
+-----第7轮重训练开始------
+Train loss:0.0492|Train accuracy:98.9022%
+-----第8轮重训练开始------
+Train loss:0.0439|Train accuracy:99.3014%
+-----第9轮重训练开始------
+Train loss:0.0408|Train accuracy:99.501%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6872|Test accuracy:84.33%
+{'0': {'precision': 0.7924901185770751, 'recall': 0.802, 'f1-score': 0.7972166998011928, 'support': 500.0}, '1': {'precision': 0.8467908902691511, 'recall': 0.818, 'f1-score': 0.8321464903357069, 'support': 500.0}, '2': {'precision': 0.9389763779527559, 'recall': 0.954, 'f1-score': 0.9464285714285715, 'support': 500.0}, '3': {'precision': 0.9229122055674518, 'recall': 0.862, 'f1-score': 0.891416752843847, 'support': 500.0}, '4': {'precision': 0.899803536345776, 'recall': 0.916, 'f1-score': 0.9078295341922696, 'support': 500.0}, '5': {'precision': 0.913232104121475, 'recall': 0.842, 'f1-score': 0.8761706555671176, 'support': 500.0}, '6': {'precision': 0.9494736842105264, 'recall': 0.902, 'f1-score': 0.9251282051282051, 'support': 500.0}, '7': {'precision': 0.9454976303317536, 'recall': 0.798, 'f1-score': 0.8655097613882864, 'support': 500.0}, '8': {'precision': 0.852, 'recall': 0.852, 'f1-score': 0.852, 'support': 500.0}, '9': {'precision': 0.8848368522072937, 'recall': 0.922, 'f1-score': 0.9030362389813908, 'support': 500.0}, '10': {'precision': 0.9553571428571429, 'recall': 0.856, 'f1-score': 0.9029535864978904, 'support': 500.0}, '11': {'precision': 0.8831460674157303, 'recall': 0.786, 'f1-score': 0.8317460317460318, 'support': 500.0}, '12': {'precision': 0.85, 'recall': 0.782, 'f1-score': 0.8145833333333332, 'support': 500.0}, '13': {'precision': 0.8062622309197651, 'recall': 0.824, 'f1-score': 0.8150346191889218, 'support': 500.0}, '14': {'precision': 0.9351669941060904, 'recall': 0.952, 'f1-score': 0.9435084241823587, 'support': 500.0}, '15': {'precision': 0.8615023474178404, 'recall': 0.734, 'f1-score': 0.7926565874730022, 'support': 500.0}, '16': {'precision': 0.7992047713717694, 'recall': 0.804, 'f1-score': 0.8015952143569293, 'support': 500.0}, '17': {'precision': 0.9425742574257425, 'recall': 0.952, 'f1-score': 0.9472636815920397, 'support': 500.0}, '18': {'precision': 0.8481973434535104, 'recall': 0.894, 'f1-score': 0.8704965920155793, 'support': 500.0}, '19': {'precision': 0.2721311475409836, 'recall': 0.83, 'f1-score': 0.40987654320987654, 'support': 100.0}, '20': {'precision': 0.3898305084745763, 'recall': 0.92, 'f1-score': 0.5476190476190477, 'support': 100.0}, '21': {'precision': 1.0, 'recall': 0.02, 'f1-score': 0.0392156862745098, 'support': 100.0}, '22': {'precision': 0.4358974358974359, 'recall': 0.51, 'f1-score': 0.4700460829493088, 'support': 100.0}, '23': {'precision': 0.512987012987013, 'recall': 0.79, 'f1-score': 0.6220472440944881, 'support': 100.0}, 'accuracy': 0.8433, 'macro avg': {'precision': 0.8099279441437858, 'recall': 0.8050833333333335, 'f1-score': 0.7752302326749961, 'support': 10000.0}, 'weighted avg': {'precision': 0.8674796887765426, 'recall': 0.8433, 'f1-score': 0.8467240950441061, 'support': 10000.0}}
+DeepGini_retrain|improve_acc:0.79%
+5:MCP采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({9: 64, 12: 60, 11: 56, 5: 52, 13: 52, 16: 52, 8: 51, 6: 51, 2: 51, 7: 50, 4: 49, 17: 48, 3: 48, 15: 48, 14: 47, 1: 46, 18: 46, 10: 42, 0: 37, 20: 15, 22: 11, 21: 11, 19: 10, 23: 5})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.4486|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.2857|Train accuracy:94.8104%
+-----第2轮重训练开始------
+Train loss:0.1166|Train accuracy:96.4072%
+-----第3轮重训练开始------
+Train loss:0.1058|Train accuracy:97.8044%
+-----第4轮重训练开始------
+Train loss:0.1008|Train accuracy:97.9042%
+-----第5轮重训练开始------
+Train loss:0.0758|Train accuracy:98.4032%
+-----第6轮重训练开始------
+Train loss:0.0619|Train accuracy:98.6028%
+-----第7轮重训练开始------
+Train loss:0.054|Train accuracy:98.6028%
+-----第8轮重训练开始------
+Train loss:0.0511|Train accuracy:99.002%
+-----第9轮重训练开始------
+Train loss:0.0472|Train accuracy:99.3014%
+(4) 开始对retrained_fine_model eval
+Test loss:0.7041|Test accuracy:83.48%
+{'0': {'precision': 0.8571428571428571, 'recall': 0.756, 'f1-score': 0.8034006376195537, 'support': 500.0}, '1': {'precision': 0.8303747534516766, 'recall': 0.842, 'f1-score': 0.8361469712015889, 'support': 500.0}, '2': {'precision': 0.9496981891348089, 'recall': 0.944, 'f1-score': 0.946840521564694, 'support': 500.0}, '3': {'precision': 0.9163179916317992, 'recall': 0.876, 'f1-score': 0.8957055214723927, 'support': 500.0}, '4': {'precision': 0.9240246406570842, 'recall': 0.9, 'f1-score': 0.9118541033434651, 'support': 500.0}, '5': {'precision': 0.9100642398286938, 'recall': 0.85, 'f1-score': 0.8790072388831438, 'support': 500.0}, '6': {'precision': 0.9791666666666666, 'recall': 0.846, 'f1-score': 0.907725321888412, 'support': 500.0}, '7': {'precision': 0.9292237442922374, 'recall': 0.814, 'f1-score': 0.8678038379530917, 'support': 500.0}, '8': {'precision': 0.8542914171656687, 'recall': 0.856, 'f1-score': 0.8551448551448552, 'support': 500.0}, '9': {'precision': 0.9339019189765458, 'recall': 0.876, 'f1-score': 0.9040247678018576, 'support': 500.0}, '10': {'precision': 0.95, 'recall': 0.874, 'f1-score': 0.9104166666666667, 'support': 500.0}, '11': {'precision': 0.8981042654028436, 'recall': 0.758, 'f1-score': 0.8221258134490238, 'support': 500.0}, '12': {'precision': 0.8865740740740741, 'recall': 0.766, 'f1-score': 0.8218884120171674, 'support': 500.0}, '13': {'precision': 0.8235294117647058, 'recall': 0.812, 'f1-score': 0.8177240684793554, 'support': 500.0}, '14': {'precision': 0.9137931034482759, 'recall': 0.954, 'f1-score': 0.933463796477495, 'support': 500.0}, '15': {'precision': 0.8507109004739336, 'recall': 0.718, 'f1-score': 0.7787418655097613, 'support': 500.0}, '16': {'precision': 0.7446808510638298, 'recall': 0.84, 'f1-score': 0.7894736842105262, 'support': 500.0}, '17': {'precision': 0.9639830508474576, 'recall': 0.91, 'f1-score': 0.9362139917695472, 'support': 500.0}, '18': {'precision': 0.8868686868686869, 'recall': 0.878, 'f1-score': 0.8824120603015075, 'support': 500.0}, '19': {'precision': 0.42408376963350786, 'recall': 0.81, 'f1-score': 0.5567010309278351, 'support': 100.0}, '20': {'precision': 0.33455882352941174, 'recall': 0.91, 'f1-score': 0.48924731182795694, 'support': 100.0}, '21': {'precision': 0.2625482625482625, 'recall': 0.68, 'f1-score': 0.37883008356545955, 'support': 100.0}, '22': {'precision': 0.26459143968871596, 'recall': 0.68, 'f1-score': 0.38095238095238093, 'support': 100.0}, '23': {'precision': 0.22727272727272727, 'recall': 0.05, 'f1-score': 0.08196721311475409, 'support': 100.0}, 'accuracy': 0.8348, 'macro avg': {'precision': 0.771479407731853, 'recall': 0.8000000000000002, 'f1-score': 0.7661588398392706, 'support': 10000.0}, 'weighted avg': {'precision': 0.8652530883713185, 'recall': 0.8348, 'f1-score': 0.8438826869915891, 'support': 10000.0}}
+MCP_retrain|improve_acc:-0.06%
+retrain_exp:3
+加载数据集
+Files already downloaded and verified
+Files already downloaded and verified
+加载retrained coarse model
+指定分裂的类别:19
+分裂的数据集的数量:500
+开始聚类｜簇数:5
+For n_clusters = 5, The average silhouette_score is : 0.5232149362564087
+聚类中心采样
+聚类边界采样
+随机采样
+DeepGini采样
+MCP采样
+1:构建聚类边界样本集
+采样的边界样本数量:51
+采样的边界标签数量统计:Counter({23: 19, 19: 13, 20: 8, 22: 6, 21: 5})
+2:构建聚类中心采样集
+采样的中心样本数量:51
+采样的中心标签数量统计:Counter({23: 12, 21: 11, 22: 11, 20: 10, 19: 7})
+3:构建随机采样集
+样本数量:51
+随机采样标签数量统计:Counter({19: 12, 23: 12, 22: 12, 21: 8, 20: 7})
+4:构建DeepGini采样集
+DeepGini采样样本数量:51
+DeepGini采样标签数量统计:Counter({20: 15, 19: 13, 23: 11, 22: 10, 21: 2})
+MCP采样样本数量:51
+MCP采样标签数量统计:Counter({20: 15, 22: 11, 21: 11, 19: 9, 23: 5})
+构建新场景数据集
+新场景样本数量:10000
+新场景样本标签数量统计:Counter({10: 500, 0: 500, 4: 500, 2: 500, 11: 500, 7: 500, 12: 500, 5: 500, 8: 500, 15: 500, 3: 500, 18: 500, 6: 500, 17: 500, 1: 500, 14: 500, 9: 500, 13: 500, 16: 500, 21: 100, 20: 100, 19: 100, 23: 100, 22: 100})
+构建出fine model
+用新场景数据集对initial_fine_model进行评估
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test loss:0.8724|Test accuracy:83.54%
+{'0': {'precision': 0.8044806517311609, 'recall': 0.79, 'f1-score': 0.7971745711402625, 'support': 500.0}, '1': {'precision': 0.823076923076923, 'recall': 0.856, 'f1-score': 0.8392156862745097, 'support': 500.0}, '2': {'precision': 0.9320388349514563, 'recall': 0.96, 'f1-score': 0.9458128078817734, 'support': 500.0}, '3': {'precision': 0.864244741873805, 'recall': 0.904, 'f1-score': 0.8836754643206256, 'support': 500.0}, '4': {'precision': 0.887378640776699, 'recall': 0.914, 'f1-score': 0.9004926108374385, 'support': 500.0}, '5': {'precision': 0.8269961977186312, 'recall': 0.87, 'f1-score': 0.847953216374269, 'support': 500.0}, '6': {'precision': 0.9166666666666666, 'recall': 0.924, 'f1-score': 0.9203187250996016, 'support': 500.0}, '7': {'precision': 0.8579881656804734, 'recall': 0.87, 'f1-score': 0.8639523336643495, 'support': 500.0}, '8': {'precision': 0.8469184890656064, 'recall': 0.852, 'f1-score': 0.8494516450648055, 'support': 500.0}, '9': {'precision': 0.7886855241264559, 'recall': 0.948, 'f1-score': 0.8610354223433242, 'support': 500.0}, '10': {'precision': 0.8891013384321224, 'recall': 0.93, 'f1-score': 0.9090909090909091, 'support': 500.0}, '11': {'precision': 0.8155339805825242, 'recall': 0.84, 'f1-score': 0.8275862068965517, 'support': 500.0}, '12': {'precision': 0.8484848484848485, 'recall': 0.784, 'f1-score': 0.814968814968815, 'support': 500.0}, '13': {'precision': 0.7976424361493124, 'recall': 0.812, 'f1-score': 0.804757185332012, 'support': 500.0}, '14': {'precision': 0.9264990328820116, 'recall': 0.958, 'f1-score': 0.9419862340216322, 'support': 500.0}, '15': {'precision': 0.7749003984063745, 'recall': 0.778, 'f1-score': 0.7764471057884232, 'support': 500.0}, '16': {'precision': 0.7857142857142857, 'recall': 0.814, 'f1-score': 0.7996070726915521, 'support': 500.0}, '17': {'precision': 0.9298245614035088, 'recall': 0.954, 'f1-score': 0.9417571569595261, 'support': 500.0}, '18': {'precision': 0.6453804347826086, 'recall': 0.95, 'f1-score': 0.7686084142394821, 'support': 500.0}, '19': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '20': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '21': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '22': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '23': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, 'accuracy': 0.8354, 'macro avg': {'precision': 0.665064839687728, 'recall': 0.6961666666666666, 'f1-score': 0.6789121492912442, 'support': 10000.0}, 'weighted avg': {'precision': 0.7980778076252737, 'recall': 0.8354, 'f1-score': 0.8146945791494931, 'support': 10000.0}}
+开始retrain阶段
+1:聚类边界采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1001
+retrain样本标签统计:Counter({5: 67, 3: 57, 15: 57, 18: 56, 4: 56, 8: 55, 1: 55, 16: 51, 6: 51, 17: 50, 11: 50, 14: 48, 2: 48, 9: 48, 12: 46, 7: 42, 10: 41, 13: 37, 0: 35, 23: 19, 19: 13, 20: 8, 22: 6, 21: 5})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.4006|Train accuracy:94.8052%
+-----第1轮重训练开始------
+Train loss:0.2074|Train accuracy:95.5045%
+-----第2轮重训练开始------
+Train loss:0.12|Train accuracy:97.1029%
+-----第3轮重训练开始------
+Train loss:0.1165|Train accuracy:96.004%
+-----第4轮重训练开始------
+Train loss:0.0906|Train accuracy:97.2028%
+-----第5轮重训练开始------
+Train loss:0.0732|Train accuracy:97.8022%
+-----第6轮重训练开始------
+Train loss:0.0553|Train accuracy:98.6014%
+-----第7轮重训练开始------
+Train loss:0.0495|Train accuracy:98.9011%
+-----第8轮重训练开始------
+Train loss:0.0445|Train accuracy:99.2008%
+-----第9轮重训练开始------
+Train loss:0.0409|Train accuracy:99.6004%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6943|Test accuracy:83.57%
+{'0': {'precision': 0.8907363420427553, 'recall': 0.75, 'f1-score': 0.8143322475570032, 'support': 500.0}, '1': {'precision': 0.8556263269639066, 'recall': 0.806, 'f1-score': 0.8300720906282183, 'support': 500.0}, '2': {'precision': 0.9334637964774951, 'recall': 0.954, 'f1-score': 0.9436201780415431, 'support': 500.0}, '3': {'precision': 0.9111570247933884, 'recall': 0.882, 'f1-score': 0.8963414634146342, 'support': 500.0}, '4': {'precision': 0.9105691056910569, 'recall': 0.896, 'f1-score': 0.903225806451613, 'support': 500.0}, '5': {'precision': 0.9308035714285714, 'recall': 0.834, 'f1-score': 0.8797468354430379, 'support': 500.0}, '6': {'precision': 0.9326530612244898, 'recall': 0.914, 'f1-score': 0.9232323232323232, 'support': 500.0}, '7': {'precision': 0.9287305122494433, 'recall': 0.834, 'f1-score': 0.8788198103266596, 'support': 500.0}, '8': {'precision': 0.8391472868217055, 'recall': 0.866, 'f1-score': 0.8523622047244095, 'support': 500.0}, '9': {'precision': 0.9521640091116174, 'recall': 0.836, 'f1-score': 0.8903088391906283, 'support': 500.0}, '10': {'precision': 0.8976833976833977, 'recall': 0.93, 'f1-score': 0.9135559921414538, 'support': 500.0}, '11': {'precision': 0.9028436018957346, 'recall': 0.762, 'f1-score': 0.8264642082429502, 'support': 500.0}, '12': {'precision': 0.8243801652892562, 'recall': 0.798, 'f1-score': 0.8109756097560975, 'support': 500.0}, '13': {'precision': 0.8542600896860987, 'recall': 0.762, 'f1-score': 0.8054968287526427, 'support': 500.0}, '14': {'precision': 0.9274509803921569, 'recall': 0.946, 'f1-score': 0.9366336633663367, 'support': 500.0}, '15': {'precision': 0.7858585858585858, 'recall': 0.778, 'f1-score': 0.7819095477386935, 'support': 500.0}, '16': {'precision': 0.76, 'recall': 0.836, 'f1-score': 0.7961904761904762, 'support': 500.0}, '17': {'precision': 0.9547325102880658, 'recall': 0.928, 'f1-score': 0.9411764705882354, 'support': 500.0}, '18': {'precision': 0.8747591522157996, 'recall': 0.908, 'f1-score': 0.8910696761530913, 'support': 500.0}, '19': {'precision': 0.32978723404255317, 'recall': 0.62, 'f1-score': 0.4305555555555555, 'support': 100.0}, '20': {'precision': 0.5263157894736842, 'recall': 0.8, 'f1-score': 0.6349206349206348, 'support': 100.0}, '21': {'precision': 0.022222222222222223, 'recall': 0.01, 'f1-score': 0.013793103448275864, 'support': 100.0}, '22': {'precision': 0.1388888888888889, 'recall': 0.1, 'f1-score': 0.11627906976744186, 'support': 100.0}, '23': {'precision': 0.23979591836734693, 'recall': 0.94, 'f1-score': 0.38211382113821135, 'support': 100.0}, 'accuracy': 0.8357, 'macro avg': {'precision': 0.7551678988795092, 'recall': 0.7787499999999999, 'f1-score': 0.7538831856987569, 'support': 10000.0}, 'weighted avg': {'precision': 0.8559210765356231, 'recall': 0.8357, 'f1-score': 0.8415533354453036, 'support': 10000.0}}
+boundary_retrain|improve_acc:0.03%
+2:聚类中心采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1001
+retrain样本标签统计:Counter({2: 62, 9: 60, 14: 57, 12: 56, 4: 54, 17: 54, 10: 52, 7: 50, 3: 50, 0: 50, 13: 49, 1: 48, 18: 47, 8: 47, 15: 46, 6: 46, 11: 43, 5: 42, 16: 37, 23: 12, 21: 11, 22: 11, 20: 10, 19: 7})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3574|Train accuracy:94.9051%
+-----第1轮重训练开始------
+Train loss:0.1795|Train accuracy:95.1049%
+-----第2轮重训练开始------
+Train loss:0.068|Train accuracy:98.2018%
+-----第3轮重训练开始------
+Train loss:0.0626|Train accuracy:99.001%
+-----第4轮重训练开始------
+Train loss:0.0493|Train accuracy:99.5005%
+-----第5轮重训练开始------
+Train loss:0.035|Train accuracy:99.5005%
+-----第6轮重训练开始------
+Train loss:0.0277|Train accuracy:99.7003%
+-----第7轮重训练开始------
+Train loss:0.0237|Train accuracy:99.7003%
+-----第8轮重训练开始------
+Train loss:0.0209|Train accuracy:99.9001%
+-----第9轮重训练开始------
+Train loss:0.0188|Train accuracy:99.9001%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6187|Test accuracy:85.09%
+{'0': {'precision': 0.7540687160940326, 'recall': 0.834, 'f1-score': 0.792022792022792, 'support': 500.0}, '1': {'precision': 0.8243243243243243, 'recall': 0.854, 'f1-score': 0.8388998035363459, 'support': 500.0}, '2': {'precision': 0.9408284023668639, 'recall': 0.954, 'f1-score': 0.9473684210526316, 'support': 500.0}, '3': {'precision': 0.9038854805725971, 'recall': 0.884, 'f1-score': 0.8938321536905967, 'support': 500.0}, '4': {'precision': 0.917864476386037, 'recall': 0.894, 'f1-score': 0.905775075987842, 'support': 500.0}, '5': {'precision': 0.896049896049896, 'recall': 0.862, 'f1-score': 0.8786952089704383, 'support': 500.0}, '6': {'precision': 0.951271186440678, 'recall': 0.898, 'f1-score': 0.9238683127572017, 'support': 500.0}, '7': {'precision': 0.9398148148148148, 'recall': 0.812, 'f1-score': 0.8712446351931331, 'support': 500.0}, '8': {'precision': 0.8496993987975952, 'recall': 0.848, 'f1-score': 0.8488488488488488, 'support': 500.0}, '9': {'precision': 0.9098196392785571, 'recall': 0.908, 'f1-score': 0.908908908908909, 'support': 500.0}, '10': {'precision': 0.9468085106382979, 'recall': 0.89, 'f1-score': 0.9175257731958764, 'support': 500.0}, '11': {'precision': 0.8474226804123711, 'recall': 0.822, 'f1-score': 0.8345177664974619, 'support': 500.0}, '12': {'precision': 0.8340336134453782, 'recall': 0.794, 'f1-score': 0.8135245901639344, 'support': 500.0}, '13': {'precision': 0.8571428571428571, 'recall': 0.78, 'f1-score': 0.8167539267015708, 'support': 500.0}, '14': {'precision': 0.9224806201550387, 'recall': 0.952, 'f1-score': 0.937007874015748, 'support': 500.0}, '15': {'precision': 0.87, 'recall': 0.696, 'f1-score': 0.7733333333333333, 'support': 500.0}, '16': {'precision': 0.7725563909774437, 'recall': 0.822, 'f1-score': 0.7965116279069768, 'support': 500.0}, '17': {'precision': 0.9284332688588007, 'recall': 0.96, 'f1-score': 0.943952802359882, 'support': 500.0}, '18': {'precision': 0.930648769574944, 'recall': 0.832, 'f1-score': 0.8785638859556494, 'support': 500.0}, '19': {'precision': 0.9411764705882353, 'recall': 0.64, 'f1-score': 0.7619047619047621, 'support': 100.0}, '20': {'precision': 0.7272727272727273, 'recall': 0.88, 'f1-score': 0.7963800904977375, 'support': 100.0}, '21': {'precision': 0.42857142857142855, 'recall': 0.72, 'f1-score': 0.5373134328358209, 'support': 100.0}, '22': {'precision': 0.4519774011299435, 'recall': 0.8, 'f1-score': 0.5776173285198556, 'support': 100.0}, '23': {'precision': 0.24675324675324675, 'recall': 0.57, 'f1-score': 0.34441087613293053, 'support': 100.0}, 'accuracy': 0.8509, 'macro avg': {'precision': 0.8163710133602545, 'recall': 0.8294166666666666, 'f1-score': 0.8141159262912616, 'support': 10000.0}, 'weighted avg': {'precision': 0.8678151650596821, 'recall': 0.8509, 'f1-score': 0.8562340519538697, 'support': 10000.0}}
+center_retrain|improve_acc:1.55%
+3:随机采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1001
+retrain样本标签统计:Counter({7: 61, 0: 60, 13: 55, 18: 53, 2: 53, 10: 52, 3: 52, 4: 50, 14: 50, 9: 50, 17: 50, 11: 49, 6: 48, 12: 48, 5: 48, 1: 47, 16: 42, 15: 41, 8: 41, 19: 12, 23: 12, 22: 12, 21: 8, 20: 7})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3821|Train accuracy:94.9051%
+-----第1轮重训练开始------
+Train loss:0.2166|Train accuracy:95.1049%
+-----第2轮重训练开始------
+Train loss:0.0989|Train accuracy:96.5035%
+-----第3轮重训练开始------
+Train loss:0.0863|Train accuracy:96.9031%
+-----第4轮重训练开始------
+Train loss:0.0861|Train accuracy:98.3017%
+-----第5轮重训练开始------
+Train loss:0.0606|Train accuracy:99.001%
+-----第6轮重训练开始------
+Train loss:0.05|Train accuracy:99.1009%
+-----第7轮重训练开始------
+Train loss:0.0414|Train accuracy:99.5005%
+-----第8轮重训练开始------
+Train loss:0.0365|Train accuracy:99.5005%
+-----第9轮重训练开始------
+Train loss:0.033|Train accuracy:99.7003%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6484|Test accuracy:84.74%
+{'0': {'precision': 0.7775628626692457, 'recall': 0.804, 'f1-score': 0.7905604719764012, 'support': 500.0}, '1': {'precision': 0.8568464730290456, 'recall': 0.826, 'f1-score': 0.8411405295315683, 'support': 500.0}, '2': {'precision': 0.9300970873786408, 'recall': 0.958, 'f1-score': 0.9438423645320196, 'support': 500.0}, '3': {'precision': 0.919831223628692, 'recall': 0.872, 'f1-score': 0.8952772073921971, 'support': 500.0}, '4': {'precision': 0.9180327868852459, 'recall': 0.896, 'f1-score': 0.9068825910931175, 'support': 500.0}, '5': {'precision': 0.9012605042016807, 'recall': 0.858, 'f1-score': 0.8790983606557377, 'support': 500.0}, '6': {'precision': 0.9439834024896265, 'recall': 0.91, 'f1-score': 0.9266802443991854, 'support': 500.0}, '7': {'precision': 0.9354838709677419, 'recall': 0.812, 'f1-score': 0.8693790149892934, 'support': 500.0}, '8': {'precision': 0.857429718875502, 'recall': 0.854, 'f1-score': 0.8557114228456913, 'support': 500.0}, '9': {'precision': 0.9308855291576674, 'recall': 0.862, 'f1-score': 0.8951194184839044, 'support': 500.0}, '10': {'precision': 0.8976833976833977, 'recall': 0.93, 'f1-score': 0.9135559921414538, 'support': 500.0}, '11': {'precision': 0.8336673346693386, 'recall': 0.832, 'f1-score': 0.8328328328328328, 'support': 500.0}, '12': {'precision': 0.8530701754385965, 'recall': 0.778, 'f1-score': 0.8138075313807532, 'support': 500.0}, '13': {'precision': 0.8393234672304439, 'recall': 0.794, 'f1-score': 0.816032887975334, 'support': 500.0}, '14': {'precision': 0.9404761904761905, 'recall': 0.948, 'f1-score': 0.9442231075697212, 'support': 500.0}, '15': {'precision': 0.8817480719794345, 'recall': 0.686, 'f1-score': 0.7716535433070867, 'support': 500.0}, '16': {'precision': 0.7754318618042226, 'recall': 0.808, 'f1-score': 0.7913809990205681, 'support': 500.0}, '17': {'precision': 0.9386138613861386, 'recall': 0.948, 'f1-score': 0.9432835820895521, 'support': 500.0}, '18': {'precision': 0.9094827586206896, 'recall': 0.844, 'f1-score': 0.8755186721991701, 'support': 500.0}, '19': {'precision': 0.4009009009009009, 'recall': 0.89, 'f1-score': 0.5527950310559007, 'support': 100.0}, '20': {'precision': 0.8415841584158416, 'recall': 0.85, 'f1-score': 0.845771144278607, 'support': 100.0}, '21': {'precision': 0.19327731092436976, 'recall': 0.23, 'f1-score': 0.21004566210045664, 'support': 100.0}, '22': {'precision': 0.39378238341968913, 'recall': 0.76, 'f1-score': 0.5187713310580204, 'support': 100.0}, '23': {'precision': 0.4396135265700483, 'recall': 0.91, 'f1-score': 0.5928338762214984, 'support': 100.0}, 'accuracy': 0.8474, 'macro avg': {'precision': 0.7962528691167664, 'recall': 0.8275000000000001, 'f1-score': 0.8010915757970863, 'support': 10000.0}, 'weighted avg': {'precision': 0.8647371117308856, 'recall': 0.8474, 'f1-score': 0.8525012091679244, 'support': 10000.0}}
+random_retrain|improve_acc:1.2%
+4:DeepGini采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1001
+retrain样本标签统计:Counter({8: 62, 2: 59, 14: 56, 7: 55, 9: 55, 0: 54, 4: 53, 3: 53, 11: 51, 13: 50, 6: 49, 18: 49, 12: 48, 1: 47, 17: 46, 10: 44, 15: 42, 5: 39, 16: 38, 20: 15, 19: 13, 23: 11, 22: 10, 21: 2})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3325|Train accuracy:94.9051%
+-----第1轮重训练开始------
+Train loss:0.1847|Train accuracy:94.9051%
+-----第2轮重训练开始------
+Train loss:0.0907|Train accuracy:96.7033%
+-----第3轮重训练开始------
+Train loss:0.0845|Train accuracy:97.8022%
+-----第4轮重训练开始------
+Train loss:0.0771|Train accuracy:98.5015%
+-----第5轮重训练开始------
+Train loss:0.0609|Train accuracy:98.9011%
+-----第6轮重训练开始------
+Train loss:0.052|Train accuracy:98.9011%
+-----第7轮重训练开始------
+Train loss:0.0459|Train accuracy:99.3007%
+-----第8轮重训练开始------
+Train loss:0.0412|Train accuracy:99.3007%
+-----第9轮重训练开始------
+Train loss:0.0383|Train accuracy:99.5005%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6752|Test accuracy:84.49%
+{'0': {'precision': 0.8134171907756813, 'recall': 0.776, 'f1-score': 0.7942681678607983, 'support': 500.0}, '1': {'precision': 0.8258317025440313, 'recall': 0.844, 'f1-score': 0.8348170128585559, 'support': 500.0}, '2': {'precision': 0.9230769230769231, 'recall': 0.96, 'f1-score': 0.9411764705882353, 'support': 500.0}, '3': {'precision': 0.9193205944798302, 'recall': 0.866, 'f1-score': 0.8918640576725024, 'support': 500.0}, '4': {'precision': 0.9213250517598344, 'recall': 0.89, 'f1-score': 0.9053916581892167, 'support': 500.0}, '5': {'precision': 0.9242761692650334, 'recall': 0.83, 'f1-score': 0.8746048472075868, 'support': 500.0}, '6': {'precision': 0.9287169042769857, 'recall': 0.912, 'f1-score': 0.9202825428859738, 'support': 500.0}, '7': {'precision': 0.9098712446351931, 'recall': 0.848, 'f1-score': 0.8778467908902691, 'support': 500.0}, '8': {'precision': 0.8683127572016461, 'recall': 0.844, 'f1-score': 0.8559837728194727, 'support': 500.0}, '9': {'precision': 0.874296435272045, 'recall': 0.932, 'f1-score': 0.9022265246853824, 'support': 500.0}, '10': {'precision': 0.9474789915966386, 'recall': 0.902, 'f1-score': 0.9241803278688525, 'support': 500.0}, '11': {'precision': 0.8725274725274725, 'recall': 0.794, 'f1-score': 0.8314136125654451, 'support': 500.0}, '12': {'precision': 0.8668171557562077, 'recall': 0.768, 'f1-score': 0.8144220572640508, 'support': 500.0}, '13': {'precision': 0.8357894736842105, 'recall': 0.794, 'f1-score': 0.8143589743589743, 'support': 500.0}, '14': {'precision': 0.9245647969052224, 'recall': 0.956, 'f1-score': 0.9400196656833825, 'support': 500.0}, '15': {'precision': 0.8605769230769231, 'recall': 0.716, 'f1-score': 0.7816593886462881, 'support': 500.0}, '16': {'precision': 0.7932405566600398, 'recall': 0.798, 'f1-score': 0.7956131605184447, 'support': 500.0}, '17': {'precision': 0.9462151394422311, 'recall': 0.95, 'f1-score': 0.9481037924151696, 'support': 500.0}, '18': {'precision': 0.8345724907063197, 'recall': 0.898, 'f1-score': 0.8651252408477842, 'support': 500.0}, '19': {'precision': 0.3371647509578544, 'recall': 0.88, 'f1-score': 0.48753462603878117, 'support': 100.0}, '20': {'precision': 0.44075829383886256, 'recall': 0.93, 'f1-score': 0.5980707395498392, 'support': 100.0}, '21': {'precision': 1.0, 'recall': 0.01, 'f1-score': 0.019801980198019802, 'support': 100.0}, '22': {'precision': 0.4326241134751773, 'recall': 0.61, 'f1-score': 0.5062240663900415, 'support': 100.0}, '23': {'precision': 0.3850574712643678, 'recall': 0.67, 'f1-score': 0.48905109489051096, 'support': 100.0}, 'accuracy': 0.8449, 'macro avg': {'precision': 0.8077430251324472, 'recall': 0.8074166666666667, 'f1-score': 0.7755850238705658, 'support': 10000.0}, 'weighted avg': {'precision': 0.8654674449774862, 'recall': 0.8449, 'f1-score': 0.8466747283619912, 'support': 10000.0}}
+DeepGini_retrain|improve_acc:0.95%
+5:MCP采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1001
+retrain样本标签统计:Counter({8: 60, 17: 59, 16: 59, 1: 57, 9: 56, 2: 55, 18: 55, 15: 54, 5: 53, 6: 52, 7: 52, 13: 52, 14: 47, 0: 45, 4: 43, 12: 39, 11: 38, 3: 38, 10: 36, 20: 15, 22: 11, 21: 11, 19: 9, 23: 5})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.4453|Train accuracy:94.9051%
+-----第1轮重训练开始------
+Train loss:0.2877|Train accuracy:94.9051%
+-----第2轮重训练开始------
+Train loss:0.1308|Train accuracy:96.004%
+-----第3轮重训练开始------
+Train loss:0.1105|Train accuracy:97.6024%
+-----第4轮重训练开始------
+Train loss:0.1082|Train accuracy:97.5025%
+-----第5轮重训练开始------
+Train loss:0.0834|Train accuracy:97.8022%
+-----第6轮重训练开始------
+Train loss:0.0693|Train accuracy:98.1019%
+-----第7轮重训练开始------
+Train loss:0.0602|Train accuracy:98.6014%
+-----第8轮重训练开始------
+Train loss:0.0561|Train accuracy:98.8012%
+-----第9轮重训练开始------
+Train loss:0.0516|Train accuracy:99.3007%
+(4) 开始对retrained_fine_model eval
+Test loss:0.7019|Test accuracy:83.34%
+{'0': {'precision': 0.829004329004329, 'recall': 0.766, 'f1-score': 0.7962577962577962, 'support': 500.0}, '1': {'precision': 0.8410462776659959, 'recall': 0.836, 'f1-score': 0.8385155466399198, 'support': 500.0}, '2': {'precision': 0.9441117764471058, 'recall': 0.946, 'f1-score': 0.9450549450549449, 'support': 500.0}, '3': {'precision': 0.9221052631578948, 'recall': 0.876, 'f1-score': 0.8984615384615385, 'support': 500.0}, '4': {'precision': 0.930379746835443, 'recall': 0.882, 'f1-score': 0.9055441478439425, 'support': 500.0}, '5': {'precision': 0.9351230425055929, 'recall': 0.836, 'f1-score': 0.8827877507919747, 'support': 500.0}, '6': {'precision': 0.9623893805309734, 'recall': 0.87, 'f1-score': 0.9138655462184874, 'support': 500.0}, '7': {'precision': 0.9282511210762332, 'recall': 0.828, 'f1-score': 0.8752642706131079, 'support': 500.0}, '8': {'precision': 0.8323699421965318, 'recall': 0.864, 'f1-score': 0.8478900883218843, 'support': 500.0}, '9': {'precision': 0.9503386004514672, 'recall': 0.842, 'f1-score': 0.8928950159066807, 'support': 500.0}, '10': {'precision': 0.9503239740820735, 'recall': 0.88, 'f1-score': 0.9138110072689511, 'support': 500.0}, '11': {'precision': 0.9029126213592233, 'recall': 0.744, 'f1-score': 0.8157894736842106, 'support': 500.0}, '12': {'precision': 0.8496732026143791, 'recall': 0.78, 'f1-score': 0.8133472367049009, 'support': 500.0}, '13': {'precision': 0.8189134808853119, 'recall': 0.814, 'f1-score': 0.8164493480441323, 'support': 500.0}, '14': {'precision': 0.9155470249520153, 'recall': 0.954, 'f1-score': 0.9343780607247796, 'support': 500.0}, '15': {'precision': 0.8609112709832134, 'recall': 0.718, 'f1-score': 0.7829880043620502, 'support': 500.0}, '16': {'precision': 0.776735459662289, 'recall': 0.828, 'f1-score': 0.8015488867376572, 'support': 500.0}, '17': {'precision': 0.9604166666666667, 'recall': 0.922, 'f1-score': 0.9408163265306122, 'support': 500.0}, '18': {'precision': 0.8690476190476191, 'recall': 0.876, 'f1-score': 0.8725099601593627, 'support': 500.0}, '19': {'precision': 0.30638297872340425, 'recall': 0.72, 'f1-score': 0.4298507462686567, 'support': 100.0}, '20': {'precision': 0.39344262295081966, 'recall': 0.96, 'f1-score': 0.5581395348837209, 'support': 100.0}, '21': {'precision': 0.2391304347826087, 'recall': 0.66, 'f1-score': 0.35106382978723405, 'support': 100.0}, '22': {'precision': 0.2743362831858407, 'recall': 0.62, 'f1-score': 0.3803680981595092, 'support': 100.0}, '23': {'precision': 0.4117647058823529, 'recall': 0.07, 'f1-score': 0.11965811965811966, 'support': 100.0}, 'accuracy': 0.8334, 'macro avg': {'precision': 0.7751940760687243, 'recall': 0.7955, 'f1-score': 0.7636356366285072, 'support': 10000.0}, 'weighted avg': {'precision': 0.8652306102614682, 'recall': 0.8334, 'f1-score': 0.842799550803919, 'support': 10000.0}}
+MCP_retrain|improve_acc:-0.2%
+retrain_exp:4
+加载数据集
+Files already downloaded and verified
+Files already downloaded and verified
+加载retrained coarse model
+指定分裂的类别:19
+分裂的数据集的数量:500
+开始聚类｜簇数:5
+For n_clusters = 5, The average silhouette_score is : 0.5185984969139099
+聚类中心采样
+聚类边界采样
+随机采样
+DeepGini采样
+MCP采样
+1:构建聚类边界样本集
+采样的边界样本数量:52
+采样的边界标签数量统计:Counter({19: 18, 23: 15, 20: 10, 22: 8, 21: 1})
+2:构建聚类中心采样集
+采样的中心样本数量:52
+采样的中心标签数量统计:Counter({21: 13, 22: 12, 23: 10, 20: 10, 19: 7})
+3:构建随机采样集
+样本数量:52
+随机采样标签数量统计:Counter({21: 14, 23: 11, 22: 11, 20: 8, 19: 8})
+4:构建DeepGini采样集
+DeepGini采样样本数量:52
+DeepGini采样标签数量统计:Counter({20: 15, 19: 14, 23: 11, 22: 10, 21: 2})
+MCP采样样本数量:52
+MCP采样标签数量统计:Counter({20: 15, 22: 11, 21: 11, 19: 10, 23: 5})
+构建新场景数据集
+新场景样本数量:10000
+新场景样本标签数量统计:Counter({10: 500, 0: 500, 4: 500, 2: 500, 11: 500, 7: 500, 12: 500, 5: 500, 8: 500, 15: 500, 3: 500, 18: 500, 6: 500, 17: 500, 1: 500, 14: 500, 9: 500, 13: 500, 16: 500, 21: 100, 20: 100, 19: 100, 23: 100, 22: 100})
+构建出fine model
+用新场景数据集对initial_fine_model进行评估
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test loss:0.8765|Test accuracy:83.54%
+{'0': {'precision': 0.8044806517311609, 'recall': 0.79, 'f1-score': 0.7971745711402625, 'support': 500.0}, '1': {'precision': 0.823076923076923, 'recall': 0.856, 'f1-score': 0.8392156862745097, 'support': 500.0}, '2': {'precision': 0.9320388349514563, 'recall': 0.96, 'f1-score': 0.9458128078817734, 'support': 500.0}, '3': {'precision': 0.864244741873805, 'recall': 0.904, 'f1-score': 0.8836754643206256, 'support': 500.0}, '4': {'precision': 0.887378640776699, 'recall': 0.914, 'f1-score': 0.9004926108374385, 'support': 500.0}, '5': {'precision': 0.8269961977186312, 'recall': 0.87, 'f1-score': 0.847953216374269, 'support': 500.0}, '6': {'precision': 0.9166666666666666, 'recall': 0.924, 'f1-score': 0.9203187250996016, 'support': 500.0}, '7': {'precision': 0.8579881656804734, 'recall': 0.87, 'f1-score': 0.8639523336643495, 'support': 500.0}, '8': {'precision': 0.8469184890656064, 'recall': 0.852, 'f1-score': 0.8494516450648055, 'support': 500.0}, '9': {'precision': 0.7886855241264559, 'recall': 0.948, 'f1-score': 0.8610354223433242, 'support': 500.0}, '10': {'precision': 0.8891013384321224, 'recall': 0.93, 'f1-score': 0.9090909090909091, 'support': 500.0}, '11': {'precision': 0.8155339805825242, 'recall': 0.84, 'f1-score': 0.8275862068965517, 'support': 500.0}, '12': {'precision': 0.8484848484848485, 'recall': 0.784, 'f1-score': 0.814968814968815, 'support': 500.0}, '13': {'precision': 0.7976424361493124, 'recall': 0.812, 'f1-score': 0.804757185332012, 'support': 500.0}, '14': {'precision': 0.9264990328820116, 'recall': 0.958, 'f1-score': 0.9419862340216322, 'support': 500.0}, '15': {'precision': 0.7749003984063745, 'recall': 0.778, 'f1-score': 0.7764471057884232, 'support': 500.0}, '16': {'precision': 0.7857142857142857, 'recall': 0.814, 'f1-score': 0.7996070726915521, 'support': 500.0}, '17': {'precision': 0.9298245614035088, 'recall': 0.954, 'f1-score': 0.9417571569595261, 'support': 500.0}, '18': {'precision': 0.6453804347826086, 'recall': 0.95, 'f1-score': 0.7686084142394821, 'support': 500.0}, '19': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '20': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '21': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '22': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '23': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, 'accuracy': 0.8354, 'macro avg': {'precision': 0.665064839687728, 'recall': 0.6961666666666666, 'f1-score': 0.6789121492912442, 'support': 10000.0}, 'weighted avg': {'precision': 0.7980778076252737, 'recall': 0.8354, 'f1-score': 0.8146945791494931, 'support': 10000.0}}
+开始retrain阶段
+1:聚类边界采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({15: 65, 6: 59, 3: 59, 18: 56, 17: 55, 9: 53, 7: 52, 2: 52, 11: 50, 4: 49, 5: 48, 10: 48, 14: 45, 16: 45, 12: 45, 13: 44, 0: 43, 8: 41, 1: 41, 19: 18, 23: 15, 20: 10, 22: 8, 21: 1})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3692|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.1816|Train accuracy:95.2096%
+-----第2轮重训练开始------
+Train loss:0.1113|Train accuracy:96.507%
+-----第3轮重训练开始------
+Train loss:0.1163|Train accuracy:96.2076%
+-----第4轮重训练开始------
+Train loss:0.0912|Train accuracy:97.4052%
+-----第5轮重训练开始------
+Train loss:0.0726|Train accuracy:98.3034%
+-----第6轮重训练开始------
+Train loss:0.0639|Train accuracy:98.3034%
+-----第7轮重训练开始------
+Train loss:0.0561|Train accuracy:98.7026%
+-----第8轮重训练开始------
+Train loss:0.0512|Train accuracy:98.9022%
+-----第9轮重训练开始------
+Train loss:0.048|Train accuracy:99.1018%
+(4) 开始对retrained_fine_model eval
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/mml/anaconda3/envs/backdoor_detect/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test loss:0.6969|Test accuracy:84.14%
+{'0': {'precision': 0.758364312267658, 'recall': 0.816, 'f1-score': 0.7861271676300576, 'support': 500.0}, '1': {'precision': 0.8090737240075614, 'recall': 0.856, 'f1-score': 0.8318756073858115, 'support': 500.0}, '2': {'precision': 0.951417004048583, 'recall': 0.94, 'f1-score': 0.9456740442655935, 'support': 500.0}, '3': {'precision': 0.9152542372881356, 'recall': 0.864, 'f1-score': 0.8888888888888888, 'support': 500.0}, '4': {'precision': 0.9291666666666667, 'recall': 0.892, 'f1-score': 0.9102040816326532, 'support': 500.0}, '5': {'precision': 0.8983402489626556, 'recall': 0.866, 'f1-score': 0.8818737270875764, 'support': 500.0}, '6': {'precision': 0.9507494646680942, 'recall': 0.888, 'f1-score': 0.9183040330920372, 'support': 500.0}, '7': {'precision': 0.9137931034482759, 'recall': 0.848, 'f1-score': 0.8796680497925311, 'support': 500.0}, '8': {'precision': 0.8388998035363457, 'recall': 0.854, 'f1-score': 0.846382556987116, 'support': 500.0}, '9': {'precision': 0.9251559251559252, 'recall': 0.89, 'f1-score': 0.9072375127421, 'support': 500.0}, '10': {'precision': 0.9599109131403119, 'recall': 0.862, 'f1-score': 0.9083245521601687, 'support': 500.0}, '11': {'precision': 0.8811659192825112, 'recall': 0.786, 'f1-score': 0.8308668076109937, 'support': 500.0}, '12': {'precision': 0.8326359832635983, 'recall': 0.796, 'f1-score': 0.8139059304703476, 'support': 500.0}, '13': {'precision': 0.8498896247240618, 'recall': 0.77, 'f1-score': 0.8079748163693599, 'support': 500.0}, '14': {'precision': 0.9319066147859922, 'recall': 0.958, 'f1-score': 0.9447731755424064, 'support': 500.0}, '15': {'precision': 0.8340909090909091, 'recall': 0.734, 'f1-score': 0.7808510638297873, 'support': 500.0}, '16': {'precision': 0.8366445916114791, 'recall': 0.758, 'f1-score': 0.7953830010493179, 'support': 500.0}, '17': {'precision': 0.9350393700787402, 'recall': 0.95, 'f1-score': 0.9424603174603176, 'support': 500.0}, '18': {'precision': 0.8560311284046692, 'recall': 0.88, 'f1-score': 0.8678500986193294, 'support': 500.0}, '19': {'precision': 0.24855491329479767, 'recall': 0.86, 'f1-score': 0.38565022421524664, 'support': 100.0}, '20': {'precision': 0.5921052631578947, 'recall': 0.9, 'f1-score': 0.7142857142857143, 'support': 100.0}, '21': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 100.0}, '22': {'precision': 0.5963302752293578, 'recall': 0.65, 'f1-score': 0.6220095693779903, 'support': 100.0}, '23': {'precision': 0.3108108108108108, 'recall': 0.69, 'f1-score': 0.42857142857142855, 'support': 100.0}, 'accuracy': 0.8414, 'macro avg': {'precision': 0.7731387836218765, 'recall': 0.8045, 'f1-score': 0.776630932044449, 'support': 10000.0}, 'weighted avg': {'precision': 0.8578544898465374, 'recall': 0.8414, 'f1-score': 0.8459364409953236, 'support': 10000.0}}
+boundary_retrain|improve_acc:0.6%
+2:聚类中心采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({16: 59, 0: 58, 15: 58, 11: 54, 12: 54, 7: 53, 2: 53, 13: 53, 3: 53, 9: 52, 14: 51, 10: 48, 8: 48, 1: 47, 4: 45, 18: 44, 17: 43, 6: 41, 5: 36, 21: 13, 22: 12, 23: 10, 20: 10, 19: 7})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3641|Train accuracy:94.7106%
+-----第1轮重训练开始------
+Train loss:0.1793|Train accuracy:94.9102%
+-----第2轮重训练开始------
+Train loss:0.0859|Train accuracy:97.4052%
+-----第3轮重训练开始------
+Train loss:0.0861|Train accuracy:98.7026%
+-----第4轮重训练开始------
+Train loss:0.0672|Train accuracy:98.9022%
+-----第5轮重训练开始------
+Train loss:0.0482|Train accuracy:99.2016%
+-----第6轮重训练开始------
+Train loss:0.0385|Train accuracy:99.501%
+-----第7轮重训练开始------
+Train loss:0.0322|Train accuracy:99.501%
+-----第8轮重训练开始------
+Train loss:0.0282|Train accuracy:99.6008%
+-----第9轮重训练开始------
+Train loss:0.0254|Train accuracy:99.6008%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6012|Test accuracy:85.48%
+{'0': {'precision': 0.787819253438114, 'recall': 0.802, 'f1-score': 0.7948463825569873, 'support': 500.0}, '1': {'precision': 0.8698481561822126, 'recall': 0.802, 'f1-score': 0.8345473465140478, 'support': 500.0}, '2': {'precision': 0.9387351778656127, 'recall': 0.95, 'f1-score': 0.9443339960238569, 'support': 500.0}, '3': {'precision': 0.9051546391752577, 'recall': 0.878, 'f1-score': 0.8913705583756346, 'support': 500.0}, '4': {'precision': 0.9166666666666666, 'recall': 0.902, 'f1-score': 0.9092741935483871, 'support': 500.0}, '5': {'precision': 0.910828025477707, 'recall': 0.858, 'f1-score': 0.8836251287332646, 'support': 500.0}, '6': {'precision': 0.9326530612244898, 'recall': 0.914, 'f1-score': 0.9232323232323232, 'support': 500.0}, '7': {'precision': 0.8803245436105477, 'recall': 0.868, 'f1-score': 0.8741188318227593, 'support': 500.0}, '8': {'precision': 0.8768577494692145, 'recall': 0.826, 'f1-score': 0.850669412976313, 'support': 500.0}, '9': {'precision': 0.8955512572533849, 'recall': 0.926, 'f1-score': 0.9105211406096362, 'support': 500.0}, '10': {'precision': 0.9358178053830227, 'recall': 0.904, 'f1-score': 0.9196337741607324, 'support': 500.0}, '11': {'precision': 0.8659574468085106, 'recall': 0.814, 'f1-score': 0.8391752577319587, 'support': 500.0}, '12': {'precision': 0.8217213114754098, 'recall': 0.802, 'f1-score': 0.8117408906882592, 'support': 500.0}, '13': {'precision': 0.8170731707317073, 'recall': 0.804, 'f1-score': 0.8104838709677419, 'support': 500.0}, '14': {'precision': 0.9144486692015209, 'recall': 0.962, 'f1-score': 0.9376218323586745, 'support': 500.0}, '15': {'precision': 0.8677884615384616, 'recall': 0.722, 'f1-score': 0.7882096069868995, 'support': 500.0}, '16': {'precision': 0.7596330275229358, 'recall': 0.828, 'f1-score': 0.7923444976076555, 'support': 500.0}, '17': {'precision': 0.93359375, 'recall': 0.956, 'f1-score': 0.9446640316205533, 'support': 500.0}, '18': {'precision': 0.9102564102564102, 'recall': 0.852, 'f1-score': 0.8801652892561983, 'support': 500.0}, '19': {'precision': 0.9, 'recall': 0.63, 'f1-score': 0.7411764705882353, 'support': 100.0}, '20': {'precision': 0.8380952380952381, 'recall': 0.88, 'f1-score': 0.8585365853658538, 'support': 100.0}, '21': {'precision': 0.4, 'recall': 0.68, 'f1-score': 0.5037037037037037, 'support': 100.0}, '22': {'precision': 0.24778761061946902, 'recall': 0.56, 'f1-score': 0.34355828220858897, 'support': 100.0}, '23': {'precision': 0.6567164179104478, 'recall': 0.88, 'f1-score': 0.7521367521367521, 'support': 100.0}, 'accuracy': 0.8548, 'macro avg': {'precision': 0.8243053270794309, 'recall': 0.8333333333333334, 'f1-score': 0.8224870899906257, 'support': 10000.0}, 'weighted avg': {'precision': 0.867462421830311, 'recall': 0.8548, 'f1-score': 0.8590200362286254, 'support': 10000.0}}
+center_retrain|improve_acc:1.94%
+3:随机采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({17: 68, 7: 57, 14: 56, 4: 53, 13: 53, 8: 51, 2: 51, 9: 51, 15: 49, 0: 49, 3: 49, 16: 48, 5: 48, 1: 47, 11: 47, 10: 45, 18: 44, 12: 43, 6: 41, 21: 14, 23: 11, 22: 11, 20: 8, 19: 8})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3673|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.1963|Train accuracy:95.1098%
+-----第2轮重训练开始------
+Train loss:0.0837|Train accuracy:96.507%
+-----第3轮重训练开始------
+Train loss:0.0747|Train accuracy:98.2036%
+-----第4轮重训练开始------
+Train loss:0.0686|Train accuracy:99.501%
+-----第5轮重训练开始------
+Train loss:0.0517|Train accuracy:99.4012%
+-----第6轮重训练开始------
+Train loss:0.0418|Train accuracy:99.501%
+-----第7轮重训练开始------
+Train loss:0.0359|Train accuracy:99.6008%
+-----第8轮重训练开始------
+Train loss:0.032|Train accuracy:99.8004%
+-----第9轮重训练开始------
+Train loss:0.0295|Train accuracy:99.9002%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6577|Test accuracy:84.6%
+{'0': {'precision': 0.854586129753915, 'recall': 0.764, 'f1-score': 0.8067581837381204, 'support': 500.0}, '1': {'precision': 0.8556701030927835, 'recall': 0.83, 'f1-score': 0.8426395939086294, 'support': 500.0}, '2': {'precision': 0.9266409266409267, 'recall': 0.96, 'f1-score': 0.9430255402750491, 'support': 500.0}, '3': {'precision': 0.9221052631578948, 'recall': 0.876, 'f1-score': 0.8984615384615385, 'support': 500.0}, '4': {'precision': 0.8897485493230174, 'recall': 0.92, 'f1-score': 0.9046214355948868, 'support': 500.0}, '5': {'precision': 0.9330357142857143, 'recall': 0.836, 'f1-score': 0.8818565400843882, 'support': 500.0}, '6': {'precision': 0.9511677282377919, 'recall': 0.896, 'f1-score': 0.9227600411946446, 'support': 500.0}, '7': {'precision': 0.9476190476190476, 'recall': 0.796, 'f1-score': 0.8652173913043478, 'support': 500.0}, '8': {'precision': 0.8661257606490872, 'recall': 0.854, 'f1-score': 0.8600201409869084, 'support': 500.0}, '9': {'precision': 0.9311827956989247, 'recall': 0.866, 'f1-score': 0.8974093264248705, 'support': 500.0}, '10': {'precision': 0.9183266932270916, 'recall': 0.922, 'f1-score': 0.9201596806387226, 'support': 500.0}, '11': {'precision': 0.8574423480083857, 'recall': 0.818, 'f1-score': 0.8372569089048106, 'support': 500.0}, '12': {'precision': 0.8612975391498882, 'recall': 0.77, 'f1-score': 0.8130939809926082, 'support': 500.0}, '13': {'precision': 0.8329809725158562, 'recall': 0.788, 'f1-score': 0.8098663926002057, 'support': 500.0}, '14': {'precision': 0.9123809523809524, 'recall': 0.958, 'f1-score': 0.9346341463414635, 'support': 500.0}, '15': {'precision': 0.8371040723981901, 'recall': 0.74, 'f1-score': 0.7855626326963907, 'support': 500.0}, '16': {'precision': 0.7680890538033395, 'recall': 0.828, 'f1-score': 0.7969201154956688, 'support': 500.0}, '17': {'precision': 0.9421157684630739, 'recall': 0.944, 'f1-score': 0.9430569430569431, 'support': 500.0}, '18': {'precision': 0.876, 'recall': 0.876, 'f1-score': 0.8759999999999999, 'support': 500.0}, '19': {'precision': 0.4460431654676259, 'recall': 0.62, 'f1-score': 0.5188284518828452, 'support': 100.0}, '20': {'precision': 0.7876106194690266, 'recall': 0.89, 'f1-score': 0.8356807511737089, 'support': 100.0}, '21': {'precision': 0.2543859649122807, 'recall': 0.58, 'f1-score': 0.3536585365853659, 'support': 100.0}, '22': {'precision': 0.225, 'recall': 0.45, 'f1-score': 0.3, 'support': 100.0}, '23': {'precision': 0.4857142857142857, 'recall': 0.85, 'f1-score': 0.6181818181818183, 'support': 100.0}, 'accuracy': 0.846, 'macro avg': {'precision': 0.795098893915379, 'recall': 0.818, 'f1-score': 0.7985695871051641, 'support': 10000.0}, 'weighted avg': {'precision': 0.8661685112759263, 'recall': 0.846, 'f1-score': 0.8532295222132472, 'support': 10000.0}}
+random_retrain|improve_acc:1.06%
+4:DeepGini采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({6: 65, 11: 61, 9: 58, 13: 56, 12: 54, 5: 53, 15: 52, 1: 51, 2: 51, 7: 51, 18: 50, 17: 49, 10: 49, 0: 47, 3: 47, 8: 42, 16: 39, 14: 39, 4: 36, 20: 15, 19: 14, 23: 11, 22: 10, 21: 2})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.3181|Train accuracy:94.8104%
+-----第1轮重训练开始------
+Train loss:0.1748|Train accuracy:94.9102%
+-----第2轮重训练开始------
+Train loss:0.0827|Train accuracy:97.2056%
+-----第3轮重训练开始------
+Train loss:0.0756|Train accuracy:98.7026%
+-----第4轮重训练开始------
+Train loss:0.0775|Train accuracy:99.002%
+-----第5轮重训练开始------
+Train loss:0.062|Train accuracy:98.9022%
+-----第6轮重训练开始------
+Train loss:0.0524|Train accuracy:98.9022%
+-----第7轮重训练开始------
+Train loss:0.0461|Train accuracy:98.9022%
+-----第8轮重训练开始------
+Train loss:0.0414|Train accuracy:99.3014%
+-----第9轮重训练开始------
+Train loss:0.0383|Train accuracy:99.6008%
+(4) 开始对retrained_fine_model eval
+Test loss:0.6954|Test accuracy:84.35%
+{'0': {'precision': 0.8052208835341366, 'recall': 0.802, 'f1-score': 0.8036072144288577, 'support': 500.0}, '1': {'precision': 0.8366935483870968, 'recall': 0.83, 'f1-score': 0.8333333333333334, 'support': 500.0}, '2': {'precision': 0.9264990328820116, 'recall': 0.958, 'f1-score': 0.9419862340216322, 'support': 500.0}, '3': {'precision': 0.9180672268907563, 'recall': 0.874, 'f1-score': 0.8954918032786885, 'support': 500.0}, '4': {'precision': 0.8952569169960475, 'recall': 0.906, 'f1-score': 0.900596421471173, 'support': 500.0}, '5': {'precision': 0.9274725274725275, 'recall': 0.844, 'f1-score': 0.8837696335078533, 'support': 500.0}, '6': {'precision': 0.9491525423728814, 'recall': 0.896, 'f1-score': 0.9218106995884775, 'support': 500.0}, '7': {'precision': 0.9496402877697842, 'recall': 0.792, 'f1-score': 0.8636859323882224, 'support': 500.0}, '8': {'precision': 0.8600405679513184, 'recall': 0.848, 'f1-score': 0.8539778449144008, 'support': 500.0}, '9': {'precision': 0.9041095890410958, 'recall': 0.924, 'f1-score': 0.9139465875370919, 'support': 500.0}, '10': {'precision': 0.9488272921108742, 'recall': 0.89, 'f1-score': 0.9184726522187822, 'support': 500.0}, '11': {'precision': 0.8583509513742071, 'recall': 0.812, 'f1-score': 0.8345323741007195, 'support': 500.0}, '12': {'precision': 0.8619153674832962, 'recall': 0.774, 'f1-score': 0.815595363540569, 'support': 500.0}, '13': {'precision': 0.8312236286919831, 'recall': 0.788, 'f1-score': 0.8090349075975358, 'support': 500.0}, '14': {'precision': 0.9390962671905697, 'recall': 0.956, 'f1-score': 0.9474727452923686, 'support': 500.0}, '15': {'precision': 0.8703241895261845, 'recall': 0.698, 'f1-score': 0.7746947835738068, 'support': 500.0}, '16': {'precision': 0.780952380952381, 'recall': 0.82, 'f1-score': 0.8, 'support': 500.0}, '17': {'precision': 0.9352941176470588, 'recall': 0.954, 'f1-score': 0.9445544554455445, 'support': 500.0}, '18': {'precision': 0.8370786516853933, 'recall': 0.894, 'f1-score': 0.8646034816247583, 'support': 500.0}, '19': {'precision': 0.3197278911564626, 'recall': 0.94, 'f1-score': 0.47715736040609136, 'support': 100.0}, '20': {'precision': 0.37349397590361444, 'recall': 0.93, 'f1-score': 0.5329512893982808, 'support': 100.0}, '21': {'precision': 1.0, 'recall': 0.02, 'f1-score': 0.0392156862745098, 'support': 100.0}, '22': {'precision': 0.379746835443038, 'recall': 0.6, 'f1-score': 0.46511627906976744, 'support': 100.0}, '23': {'precision': 0.5, 'recall': 0.56, 'f1-score': 0.5283018867924528, 'support': 100.0}, 'accuracy': 0.8435, 'macro avg': {'precision': 0.8086743613526132, 'recall': 0.8045833333333333, 'f1-score': 0.7734962070752048, 'support': 10000.0}, 'weighted avg': {'precision': 0.8674904855230113, 'recall': 0.8435, 'f1-score': 0.8464857484126019, 'support': 10000.0}}
+DeepGini_retrain|improve_acc:0.81%
+5:MCP采样retrain
+(1)构建出其他训练集和边界样本集混合集
+retrain样本数量:1002
+retrain样本标签统计:Counter({15: 63, 8: 58, 5: 57, 4: 56, 18: 55, 14: 54, 7: 54, 9: 53, 0: 52, 17: 51, 16: 51, 1: 51, 10: 46, 2: 46, 13: 45, 12: 43, 6: 42, 3: 39, 11: 34, 20: 15, 22: 11, 21: 11, 19: 10, 23: 5})
+(2) 构建出fine model
+(3) 开始对initial_fine_model retrain
+超参数:epochs:10|lr:0.01
+-----第0轮重训练开始------
+Train loss:0.437|Train accuracy:94.7106%
+-----第1轮重训练开始------
+Train loss:0.2778|Train accuracy:94.7106%
+-----第2轮重训练开始------
+Train loss:0.1196|Train accuracy:95.9082%
+-----第3轮重训练开始------
+Train loss:0.1055|Train accuracy:98.004%
+-----第4轮重训练开始------
+Train loss:0.1015|Train accuracy:98.1038%
+-----第5轮重训练开始------
+Train loss:0.0805|Train accuracy:97.8044%
+-----第6轮重训练开始------
+Train loss:0.0659|Train accuracy:98.3034%
+-----第7轮重训练开始------
+Train loss:0.058|Train accuracy:98.6028%
+-----第8轮重训练开始------
+Train loss:0.0541|Train accuracy:98.9022%
+-----第9轮重训练开始------
+Train loss:0.0501|Train accuracy:99.2016%
+(4) 开始对retrained_fine_model eval
+Test loss:0.7098|Test accuracy:83.25%
+{'0': {'precision': 0.8181818181818182, 'recall': 0.792, 'f1-score': 0.8048780487804879, 'support': 500.0}, '1': {'precision': 0.8504273504273504, 'recall': 0.796, 'f1-score': 0.822314049586777, 'support': 500.0}, '2': {'precision': 0.9567010309278351, 'recall': 0.928, 'f1-score': 0.9421319796954316, 'support': 500.0}, '3': {'precision': 0.9219409282700421, 'recall': 0.874, 'f1-score': 0.8973305954825462, 'support': 500.0}, '4': {'precision': 0.9166666666666666, 'recall': 0.902, 'f1-score': 0.9092741935483871, 'support': 500.0}, '5': {'precision': 0.9373601789709173, 'recall': 0.838, 'f1-score': 0.8848996832101373, 'support': 500.0}, '6': {'precision': 0.9748858447488584, 'recall': 0.854, 'f1-score': 0.9104477611940298, 'support': 500.0}, '7': {'precision': 0.9297052154195011, 'recall': 0.82, 'f1-score': 0.871413390010627, 'support': 500.0}, '8': {'precision': 0.8330134357005758, 'recall': 0.868, 'f1-score': 0.8501469147894222, 'support': 500.0}, '9': {'precision': 0.9299363057324841, 'recall': 0.876, 'f1-score': 0.9021627188465499, 'support': 500.0}, '10': {'precision': 0.954248366013072, 'recall': 0.876, 'f1-score': 0.913451511991658, 'support': 500.0}, '11': {'precision': 0.8952380952380953, 'recall': 0.752, 'f1-score': 0.817391304347826, 'support': 500.0}, '12': {'precision': 0.8755760368663594, 'recall': 0.76, 'f1-score': 0.8137044967880086, 'support': 500.0}, '13': {'precision': 0.8050682261208577, 'recall': 0.826, 'f1-score': 0.8153998025666338, 'support': 500.0}, '14': {'precision': 0.9281553398058252, 'recall': 0.956, 'f1-score': 0.941871921182266, 'support': 500.0}, '15': {'precision': 0.8325892857142857, 'recall': 0.746, 'f1-score': 0.7869198312236289, 'support': 500.0}, '16': {'precision': 0.7940594059405941, 'recall': 0.802, 'f1-score': 0.7980099502487563, 'support': 500.0}, '17': {'precision': 0.9676025917926566, 'recall': 0.896, 'f1-score': 0.9304257528556594, 'support': 500.0}, '18': {'precision': 0.8754940711462451, 'recall': 0.886, 'f1-score': 0.8807157057654076, 'support': 500.0}, '19': {'precision': 0.40106951871657753, 'recall': 0.75, 'f1-score': 0.5226480836236933, 'support': 100.0}, '20': {'precision': 0.37656903765690375, 'recall': 0.9, 'f1-score': 0.5309734513274337, 'support': 100.0}, '21': {'precision': 0.23367697594501718, 'recall': 0.68, 'f1-score': 0.34782608695652173, 'support': 100.0}, '22': {'precision': 0.23333333333333334, 'recall': 0.63, 'f1-score': 0.34054054054054056, 'support': 100.0}, '23': {'precision': 0.1724137931034483, 'recall': 0.05, 'f1-score': 0.07751937984496125, 'support': 100.0}, 'accuracy': 0.8325, 'macro avg': {'precision': 0.7672463688516383, 'recall': 0.7940833333333334, 'f1-score': 0.7630165481003081, 'support': 10000.0}, 'weighted avg': {'precision': 0.8640131362717548, 'recall': 0.8325, 'f1-score': 0.8428395560286436, 'support': 10000.0}}
+MCP_retrain|improve_acc:-0.29%
+实验结果保存在: exp_ans_data/CIFAR-100/ResNet18/retrain_ans.data

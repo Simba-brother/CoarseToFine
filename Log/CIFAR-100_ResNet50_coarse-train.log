@@ -1,0 +1,55 @@
+[2024-05-19 13:43:48] [DEBUG] -----第0轮训练开始------
+[2024-05-19 13:45:14] [DEBUG] Train loss:0.8164|Train accuracy:74.086%|Test loss:0.6|Test accuracy:81.1%
+[2024-05-19 13:45:14] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:45:14] [DEBUG] -----第1轮训练开始------
+[2024-05-19 13:46:35] [DEBUG] Train loss:0.3806|Train accuracy:87.594%|Test loss:0.5521|Test accuracy:82.86%
+[2024-05-19 13:46:35] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:46:35] [DEBUG] -----第2轮训练开始------
+[2024-05-19 13:47:56] [DEBUG] Train loss:0.217|Train accuracy:92.878%|Test loss:0.5242|Test accuracy:84.22%
+[2024-05-19 13:47:56] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:47:56] [DEBUG] -----第3轮训练开始------
+[2024-05-19 13:49:23] [DEBUG] Train loss:0.1394|Train accuracy:95.402%|Test loss:0.621|Test accuracy:83.43%
+[2024-05-19 13:49:23] [DEBUG] -----第4轮训练开始------
+[2024-05-19 13:50:35] [DEBUG] Train loss:0.1078|Train accuracy:96.388%|Test loss:0.5715|Test accuracy:85.46%
+[2024-05-19 13:50:35] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:50:35] [DEBUG] -----第5轮训练开始------
+[2024-05-19 13:51:48] [DEBUG] Train loss:0.0768|Train accuracy:97.474%|Test loss:0.5603|Test accuracy:85.45%
+[2024-05-19 13:51:48] [DEBUG] -----第6轮训练开始------
+[2024-05-19 13:53:01] [DEBUG] Train loss:0.0473|Train accuracy:98.47%|Test loss:0.5342|Test accuracy:87.05%
+[2024-05-19 13:53:01] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:53:01] [DEBUG] -----第7轮训练开始------
+[2024-05-19 13:54:14] [DEBUG] Train loss:0.0363|Train accuracy:98.878%|Test loss:0.6151|Test accuracy:85.78%
+[2024-05-19 13:54:14] [DEBUG] -----第8轮训练开始------
+[2024-05-19 13:55:26] [DEBUG] Train loss:0.0278|Train accuracy:99.108%|Test loss:0.5613|Test accuracy:87.07%
+[2024-05-19 13:55:27] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:55:27] [DEBUG] -----第9轮训练开始------
+[2024-05-19 13:56:40] [DEBUG] Train loss:0.0222|Train accuracy:99.308%|Test loss:0.5563|Test accuracy:87.27%
+[2024-05-19 13:56:40] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:56:40] [DEBUG] -----第10轮训练开始------
+[2024-05-19 13:57:53] [DEBUG] Train loss:0.009|Train accuracy:99.764%|Test loss:0.4711|Test accuracy:88.93%
+[2024-05-19 13:57:53] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:57:53] [DEBUG] -----第11轮训练开始------
+[2024-05-19 13:59:06] [DEBUG] Train loss:0.0027|Train accuracy:99.976%|Test loss:0.4647|Test accuracy:89.09%
+[2024-05-19 13:59:06] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 13:59:06] [DEBUG] -----第12轮训练开始------
+[2024-05-19 14:00:19] [DEBUG] Train loss:0.0019|Train accuracy:99.99%|Test loss:0.4595|Test accuracy:89.22%
+[2024-05-19 14:00:19] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 14:00:19] [DEBUG] -----第13轮训练开始------
+[2024-05-19 14:01:31] [DEBUG] Train loss:0.0017|Train accuracy:99.988%|Test loss:0.4575|Test accuracy:89.36%
+[2024-05-19 14:01:32] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 14:01:32] [DEBUG] -----第14轮训练开始------
+[2024-05-19 14:02:44] [DEBUG] Train loss:0.0014|Train accuracy:99.992%|Test loss:0.4553|Test accuracy:89.38%
+[2024-05-19 14:02:45] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 14:02:45] [DEBUG] -----第15轮训练开始------
+[2024-05-19 14:03:57] [DEBUG] Train loss:0.0012|Train accuracy:99.99%|Test loss:0.4511|Test accuracy:89.57%
+[2024-05-19 14:03:57] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 14:03:57] [DEBUG] -----第16轮训练开始------
+[2024-05-19 14:05:10] [DEBUG] Train loss:0.0012|Train accuracy:99.988%|Test loss:0.4544|Test accuracy:89.46%
+[2024-05-19 14:05:10] [DEBUG] -----第17轮训练开始------
+[2024-05-19 14:06:23] [DEBUG] Train loss:0.0011|Train accuracy:99.992%|Test loss:0.4521|Test accuracy:89.58%
+[2024-05-19 14:06:23] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 14:06:23] [DEBUG] -----第18轮训练开始------
+[2024-05-19 14:07:35] [DEBUG] Train loss:0.001|Train accuracy:99.99%|Test loss:0.4529|Test accuracy:89.63%
+[2024-05-19 14:07:36] [DEBUG] best coarse model is saved in /data/mml/CoarseToFine/exp/ResNet50/best_coarse.pth
+[2024-05-19 14:07:36] [DEBUG] -----第19轮训练开始------
+[2024-05-19 14:08:48] [DEBUG] Train loss:0.0009|Train accuracy:99.99%|Test loss:0.4511|Test accuracy:89.6%
